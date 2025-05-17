@@ -26,7 +26,6 @@ import shadowImg from "../assets/shadow.png";
     transformStyle: "preserve-3d",
     transformPerspective: 500,
     right: "50px",
-    top: "50vh",
     translateY: "-50%",
     rotationY: -10,
     rotationX: 4,
@@ -141,6 +140,12 @@ import shadowImg from "../assets/shadow.png";
     justify-content: center;
   }
 
+  @media (max-width: 768px) {
+    .card-wrapper {
+      height: 50vh;
+    }
+  }
+
   .credit-card,
   .credit-card-back {
     width: 440px;
@@ -151,9 +156,18 @@ import shadowImg from "../assets/shadow.png";
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 24px;
     position: absolute;
     transform-origin: center;
+    top: 50%;
+  }
+
+  @media (max-width: 768px) {
+    .credit-card,
+    .credit-card-back {
+      width: 300px;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
   }
 
   .credit-card {

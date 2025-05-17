@@ -5,10 +5,10 @@ import Button from "./atoms/Button.astro";
 
 <footer class="pt-20 pb-5 bg-dark">
   <div
-    class="max-w-[1160px] mx-auto w-full px-16 relative grid grid-cols-4 gap-8"
+    class="max-w-[1160px] mx-auto w-full px-16 relative grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left"
   >
     <div>
-      <img src={image.src} alt="Logo" class="w-40 mb-2.5" />
+      <img src={image.src} alt="Logo" class="w-40 mb-2.5 mx-auto lg:mx-0" />
       <p class="font-semibold text-xl mb-11">Tu Club de Inversión</p>
       <Button href="#">Únete al Club</Button>
     </div>
