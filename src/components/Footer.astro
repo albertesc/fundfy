@@ -1,0 +1,65 @@
+---
+import image from "../assets/fundfy_logo.svg";
+import Button from "./atoms/Button.astro";
+---
+
+<footer class="pt-20 pb-5 bg-dark">
+  <div
+    class="max-w-[1160px] mx-auto w-full px-16 relative grid grid-cols-4 gap-8"
+  >
+    <div>
+      <img src={image.src} alt="Logo" class="w-40 mb-2.5" />
+      <p class="font-semibold text-xl mb-11">Tu Club de Inversión</p>
+      <Button href="#">Únete al Club</Button>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a class="text-[15px] hover:text-gray-200" href="/">Inicio</a>
+        </li>
+        <li>
+          <a class="text-[15px] hover:text-gray-200" href="/">Nosotros</a>
+        </li>
+        <li>
+          <a class="text-[15px] hover:text-gray-200" href="/">Inversión</a>
+        </li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li>
+          <a class="text-[15px] hover:text-gray-200" href="/">Experiencias</a>
+        </li>
+        <li>
+          <a class="text-[15px] hover:text-gray-200" href="/">FAQS</a>
+        </li>
+        <li>
+          <a class="text-[15px] hover:text-gray-200" href="/">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li>
+          <a class="text-[15px] hover:text-gray-200" href="/"
+            >Política de Privacidad</a
+          >
+        </li>
+        <li>
+          <a class="text-[15px] hover:text-gray-200" href="/"
+            >Política de Cookies</a
+          >
+        </li>
+        <li>
+          <a class="text-[15px] hover:text-gray-200" href="/"
+            >Condiciones generales</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <p class="text-center mt-11 text-[14px] opacity-40">
+    Fundfy Investment Club SL ©2005 Todos los derechos reservados
+  </p>
+</footer>

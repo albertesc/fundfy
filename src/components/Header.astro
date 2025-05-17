@@ -1,0 +1,48 @@
+---
+import image from "../assets/fundfy_logo.svg";
+import Button from "./atoms/Button.astro";
+---
+
+<header class="fixed top-0 bottom-none z-10 w-full">
+  <div
+    class="max-w-[1160px] mx-auto flex align-center justify-between px-4 py-6"
+  >
+    <img src={image.src} alt="Logo" />
+    <div class="w-full flex justify-end items-center gap-16">
+      <nav role="navigation" aria-label="Menú principal">
+        <ul class="flex gap-[52px]">
+          <li>
+            <a
+              class="font-semibold text-[15px] hover:text-gray-200"
+              href="#inversion">Inversión</a
+            >
+          </li>
+          <li>
+            <a
+              class="font-semibold text-[15px] hover:text-gray-200"
+              href="#experiences">Experiencias</a
+            >
+          </li>
+          <li>
+            <a
+              class="font-semibold text-[15px] hover:text-gray-200"
+              href="#faqs">FAQs</a
+            >
+          </li>
+          <li>
+            <a
+              class="font-semibold text-[15px] hover:text-gray-200"
+              href="#join">Hazte socio</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <Button href="#">
+        Lanzar App
+        <span class="block ml-2 group-hover:translate-x-1 transition-transform"
+          >➔</span
+        >
+      </Button>
+    </div>
+  </div>
+</header>

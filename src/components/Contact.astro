@@ -1,0 +1,55 @@
+---
+import image from "../assets/join.jpg";
+import Input from "./atoms/Input.astro";
+import Textarea from "./atoms/Textarea.astro";
+---
+
+<section class="py-24 bg-white text-dark" id="join">
+  <div class="relative">
+    <div class="md:absolute inset-y-0 left-0 w-full md:w-1/3 h-full">
+      <img
+        src={image.src}
+        alt=""
+        class="object-cover object-center w-full h-full rounded-br-3xl rounded-tr-3xl"
+      />
+    </div>
+    <div class="container mx-auto px-8">
+      <div class="flex flex-wrap justify-end -mx-8">
+        <div class="w-full md:w-7/12 px-8">
+          <h2 class="mb-24 text-xl">
+            — <strong>Contacto</strong> Hazte socio
+          </h2>
+          <h3 class="text-[56px] text-balance font-light leading-none mb-7">
+            Únete al Club
+          </h3>
+          <form
+            action="#"
+            method="post"
+            aria-labelledby="form-title"
+            novalidate
+          >
+            <fieldset>
+              <div class="flex flex-col gap-2.5">
+                <Input
+                  name="company"
+                  label="Nombre completo:"
+                  required={true}
+                />
+                <Input name="email" label="Email:" required={true} />
+                <Input name="subject" label="Asunto:" />
+                <Textarea name="" label="Mensaje:" />
+              </div>
+
+              <p class="text-sm mt-4">* Campos obligatorios</p>
+              <input
+                type="submit"
+                value="Enviar"
+                class="cursor-pointer mt-8 font-semibold px-6 h-[40px] min-w-[150px] bg-primary rounded-full text-dark leading-0 inline-flex items-center justify-center"
+              />
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

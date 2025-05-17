@@ -1,0 +1,25 @@
+---
+interface Props {
+  name: string;
+  label: string;
+  required?: boolean;
+}
+
+const { name, required = false, label } = Astro.props;
+---
+
+<div>
+  <label class="sr-only" for={name}>
+    {label}: {required && <span>*</span>}
+  </label>
+  <textarea
+    id={name}
+    name={name}
+    required={required}
+    aria-required={required}
+    aria-describedby="name-desc"
+    placeholder={label}
+    class="transition-all w-full bg-black/10 px-5 py-3 rounded resize-none outline-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
+    rows="5"></textarea>
+  <div id="name-desc" class="error-message" aria-live="polite"></div>
+</div>

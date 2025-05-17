@@ -1,0 +1,64 @@
+<section class="text-wrapper w-screen h-screen absolute top-0 left-0">
+  <div class="max-w-[1160px] mx-auto w-full h-full px-4 flex">
+    <div class="w-1/2 flex flex-col justify-center">
+      <div class="hero-text-1">
+        <h2 class="text-[56px] font-light leading-none mb-3.5 text-balance">
+          Más que un Club de Inversión: transforma tu vida financiera
+        </h2>
+        <p class="text-xl font-semibold text-primary text-balance">
+          Operando bajo la licencia MiCA Europea
+        </p>
+      </div>
+
+      <div class="hero-text-2">
+        <h2 class="text-[56px] font-light leading-none mb-3.5 text-balance">
+          Acceso exclusivo a rentabilidad, estrategia y red profesional
+        </h2>
+        <p class="text-xl font-semibold text-primary text-balance">
+          Hemos diseñado una estructura privada para maximizar tu patrimonio
+        </p>
+      </div>
+
+      <div class="hero-text-3">
+        <h2 class="text-[56px] font-light leading-none mb-3.5 text-balance">
+          Más que ventajas. Una experiencia exclusiva
+        </h2>
+        <p class="text-xl font-semibold text-primary text-balance">
+          No dejamos nada al azar: nos guiamos por el análisis y resultados
+          medibles
+        </p>
+      </div>
+
+      <div class="flex gap-5 mt-16">
+        <a
+          href="/app"
+          class="border font-semibold border-white rounded-full min-w-[150px] text-center px-6 py-3"
+          role="button">Saber más</a
+        >
+        <a
+          href="/about"
+          class="border bg-white text-dark font-semibold border-white rounded-full min-w-[150px] text-center px-6 py-3"
+          role="button">Únete al club</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.set(".hero-text-1", {
+    opacity: 1,
+  });
+
+  gsap.set(".hero-text-2", {
+    display: "none",
+  });
+
+  gsap.set(".hero-text-3", {
+    display: "none",
+  });
+</script>

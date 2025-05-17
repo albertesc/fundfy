@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: 'Exo 2 Variable', sans-serif;
+    --color-primary: #91BDB4;
+    --color-dark: #242827;
+}

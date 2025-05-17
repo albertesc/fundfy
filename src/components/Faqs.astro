@@ -1,0 +1,81 @@
+---
+import image from "../assets/faqs.jpg";
+---
+
+<section class="py-24 bg-[#F2F3F3] text-dark" id="faqs">
+  <div class="container mx-auto px-8">
+    <div class="flex flex-wrap justify-end -mx-8">
+      <div class="w-full md:w-7/12 px-8">
+        <h2 class="mb-24 text-xl">
+          — <strong>FAQs</strong> Preguntas frequetes
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div class="relative">
+    <div class="md:absolute inset-y-0 left-0 w-full md:w-1/3 h-full">
+      <img
+        src={image.src}
+        alt=""
+        class="object-cover object-center w-full h-full rounded-br-3xl rounded-tr-3xl"
+      />
+    </div>
+    <div class="container mx-auto px-8">
+      <div class="flex flex-wrap justify-end -mx-8">
+        <div class="w-full md:w-7/12 px-8">
+          <h3 class="text-[56px] text-balance font-light leading-none mb-16">
+            Todo lo que necesitas saber
+          </h3>
+          <div class="accordion border-b border-dark w-full">
+            <button
+              aria-expanded="false"
+              aria-controls="faq1"
+              class="font-semibold mb-5 pt-5 border-t border-dark w-full flex justify-between items-center text-left"
+            >
+              ¿Qué tipo de activos financieros puedo custodiar con Fundfy?
+              <span class="inline-block rotate-90">➔</span>
+            </button>
+            <div id="faq1" class="panel" role="region" aria-hidden="true">
+              <p class="pb-5">
+                Fundfy permite la custodia tanto de activos tradicionales como
+                digitales, incluyendo criptomonedas, brindando máxima seguridad
+                y acceso verificado.
+              </p>
+            </div>
+
+            <button
+              aria-expanded="false"
+              aria-controls="faq2"
+              class="font-semibold mb-5 pt-5 border-t border-dark w-full flex justify-between items-center text-left"
+            >
+              ¿Qué diferencia a Fundfy de otras plataformas de gestión de
+              activos?
+              <span class="inline-block rotate-90">➔</span>
+            </button>
+            <div id="faq2" class="panel" role="region" aria-hidden="true"></div>
+
+            <button
+              aria-expanded="false"
+              aria-controls="faq3"
+              class="font-semibold mb-5 pt-5 border-t border-dark w-full flex justify-between items-center text-left"
+            >
+              ¿Cómo funciona el servicio de staking en Fundfy?
+              <span class="inline-block rotate-90">➔</span>
+            </button>
+            <div id="faq3" class="panel" role="region" aria-hidden="true"></div>
+
+            <button
+              aria-expanded="false"
+              aria-controls="faq4"
+              class="font-semibold mb-5 pt-5 border-t border-dark w-full flex justify-between items-center text-left"
+            >
+              ¿Cómo puedo unirme y empezar a invertir con Fundfy?
+              <span class="inline-block rotate-90">➔</span>
+            </button>
+            <div id="faq4" class="panel" role="region" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
