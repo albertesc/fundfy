@@ -2,6 +2,7 @@
 import image from "../assets/join.jpg";
 import Input from "./atoms/Input.astro";
 import Textarea from "./atoms/Textarea.astro";
+import { actions } from "astro:actions";
 ---
 
 <section class="pb-12 md:py-24 bg-white text-dark" id="join">
@@ -25,8 +26,8 @@ import Textarea from "./atoms/Textarea.astro";
             Únete al Club
           </h3>
           <form
-            action="#"
-            method="post"
+            action={actions.contact}
+            method="POST"
             aria-labelledby="form-title"
             novalidate
           >
@@ -34,20 +35,21 @@ import Textarea from "./atoms/Textarea.astro";
               <div class="flex flex-col gap-2.5">
                 <Input
                   name="company"
-                  label="Nombre completo:"
+                  label="Nombre completo*:"
                   required={true}
                 />
-                <Input name="email" label="Email:" required={true} />
+                <Input name="email" label="Email*:" required={true} />
                 <Input name="subject" label="Asunto:" />
-                <Textarea name="" label="Mensaje:" />
+                <Textarea name="message" label="Mensaje:" />
               </div>
 
               <p class="text-sm mt-4">* Campos obligatorios</p>
-              <input
+              <button
                 type="submit"
-                value="Enviar"
                 class="cursor-pointer mt-8 font-semibold px-6 h-[40px] min-w-[150px] bg-primary rounded-full text-dark leading-0 inline-flex items-center justify-center"
-              />
+              >
+                Enviar</button
+              >
             </fieldset>
           </form>
         </div>
@@ -55,3 +57,79 @@ import Textarea from "./atoms/Textarea.astro";
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("#join form") as HTMLFormElement | null;
+
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const company = form.querySelector(
+        '[name="company"]'
+      ) as HTMLInputElement | null;
+      const email = form.querySelector(
+        '[name="email"]'
+      ) as HTMLInputElement | null;
+      let valid = true;
+
+      if (!company || !email) return;
+
+      form.querySelectorAll(".error-message").forEach((el) => el.remove());
+      form.querySelectorAll("input, textarea").forEach((el) => {
+        el.classList.remove("bg-red-100");
+        el.classList.remove("focus:ring-red-500");
+        el.classList.remove("placeholder-red-400");
+      });
+
+      if (!company.value.trim()) {
+        showError(company, "Por favor, rellena tu nombre completo");
+        valid = false;
+      }
+
+      if (!email.value.trim()) {
+        showError(email, "Por favor, rellena tu email");
+        valid = false;
+      } else if (!/^\S+@\S+\.\S+$/.test(email.value)) {
+        showError(email, "Por favor, introduce un email válido");
+        valid = false;
+      }
+
+      if (!valid) return;
+
+      showSuccess("Formulario enviado con éxito");
+
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          "X-Requested-With": "XMLHttpRequest",
+        },
+      });
+    });
+
+    function showError(input: HTMLInputElement, message: string) {
+      const error = document.createElement("p");
+      error.className = "error-message text-red-600 text-sm mt-1";
+      error.innerText = message;
+      if (input.parentNode) {
+        input.parentNode.appendChild(error);
+      }
+      input.classList.add("bg-red-100");
+      input.classList.add("focus:ring-red-500");
+      input.classList.add("placeholder-red-400");
+    }
+
+    function showSuccess(message: string) {
+      const el = document.createElement("p");
+      el.className = "success-message text-green-600 text-sm mt-4";
+      el.innerText = message;
+      if (form) {
+        form.appendChild(el);
+      }
+    }
+  });
+</script>

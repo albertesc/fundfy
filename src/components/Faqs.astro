@@ -35,7 +35,7 @@ import image from "../assets/faqs.jpg";
             <button
               aria-expanded="false"
               aria-controls="faq1"
-              class="font-semibold mb-5 pt-5 border-t border-dark w-full flex justify-between items-center text-left"
+              class="cursor-pointer font-semibold mb-5 pt-5 border-t border-dark w-full flex justify-between items-center text-left"
             >
               ¿Qué tipo de activos financieros puedo custodiar con Fundfy?
               <span class="inline-block rotate-90">➔</span>
@@ -51,36 +51,133 @@ import image from "../assets/faqs.jpg";
             <button
               aria-expanded="false"
               aria-controls="faq2"
-              class="font-semibold mb-5 pt-5 border-t border-dark w-full flex justify-between items-center text-left"
+              class="cursor-pointer font-semibold mb-5 pt-5 border-t border-dark w-full flex justify-between items-center text-left"
             >
               ¿Qué diferencia a Fundfy de otras plataformas de gestión de
               activos?
               <span class="inline-block rotate-90">➔</span>
             </button>
-            <div id="faq2" class="panel" role="region" aria-hidden="true"></div>
+            <div id="faq2" class="panel" role="region" aria-hidden="true">
+              <p class="pb-5">
+                Fundfy permite la custodia tanto de activos tradicionales como
+                digitales, incluyendo criptomonedas, brindando máxima seguridad
+                y acceso verificado.
+              </p>
+            </div>
 
             <button
               aria-expanded="false"
               aria-controls="faq3"
-              class="font-semibold mb-5 pt-5 border-t border-dark w-full flex justify-between items-center text-left"
+              class="cursor-pointer font-semibold mb-5 pt-5 border-t border-dark w-full flex justify-between items-center text-left"
             >
               ¿Cómo funciona el servicio de staking en Fundfy?
               <span class="inline-block rotate-90">➔</span>
             </button>
-            <div id="faq3" class="panel" role="region" aria-hidden="true"></div>
+            <div id="faq3" class="panel" role="region" aria-hidden="true">
+              <p class="pb-5">
+                Fundfy permite la custodia tanto de activos tradicionales como
+                digitales, incluyendo criptomonedas, brindando máxima seguridad
+                y acceso verificado.
+              </p>
+            </div>
 
             <button
               aria-expanded="false"
               aria-controls="faq4"
-              class="font-semibold mb-5 pt-5 border-t border-dark w-full flex justify-between items-center text-left"
+              class="cursor-pointer font-semibold mb-5 pt-5 border-t border-dark w-full flex justify-between items-center text-left"
             >
               ¿Cómo puedo unirme y empezar a invertir con Fundfy?
               <span class="inline-block rotate-90">➔</span>
             </button>
-            <div id="faq4" class="panel" role="region" aria-hidden="true"></div>
+            <div id="faq4" class="panel" role="region" aria-hidden="true">
+              <p class="pb-5">
+                Fundfy permite la custodia tanto de activos tradicionales como
+                digitales, incluyendo criptomonedas, brindando máxima seguridad
+                y acceso verificado.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  import { gsap, Power1, Elastic } from "gsap";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".accordion > button");
+
+    buttons.forEach((btn) => {
+      const panelId = btn.getAttribute("aria-controls");
+      if (!panelId) return;
+      const panel = document.getElementById(panelId);
+      const icon = btn.querySelector("span");
+      if (!panel || !icon) return;
+
+      gsap.set(panel, { height: 0, overflow: "hidden", opacity: 0 });
+
+      btn.addEventListener("click", () => {
+        const isOpen = btn.getAttribute("aria-expanded") === "true";
+
+        buttons.forEach((otherBtn) => {
+          if (otherBtn !== btn) {
+            const otherPanelId = otherBtn.getAttribute("aria-controls");
+            if (!otherPanelId) return;
+            const otherPanel = document.getElementById(otherPanelId);
+            const otherIcon = otherBtn.querySelector("span");
+            if (!otherPanel || !otherIcon) return;
+            otherBtn.setAttribute("aria-expanded", "false");
+            otherPanel.setAttribute("aria-hidden", "true");
+            gsap.to(otherPanel, {
+              height: 0,
+              opacity: 0,
+              duration: 0.5,
+              ease: Power1.easeInOut,
+            });
+            gsap.to(otherIcon, {
+              rotation: 90,
+              duration: 0.3,
+              ease: Power1.easeInOut,
+            });
+          }
+        });
+
+        if (!isOpen) {
+          btn.setAttribute("aria-expanded", "true");
+          panel.setAttribute("aria-hidden", "false");
+
+          const autoHeight = panel.scrollHeight;
+
+          gsap.to(panel, {
+            height: autoHeight,
+            opacity: 1,
+            duration: 0.8,
+            ease: Elastic.easeOut.config(1, 0.5),
+          });
+          gsap.to(icon, {
+            rotation: 270,
+            duration: 0.5,
+            ease: Power1.easeOut,
+          });
+        } else {
+          btn.setAttribute("aria-expanded", "false");
+          panel.setAttribute("aria-hidden", "true");
+
+          gsap.to(panel, {
+            height: 0,
+            opacity: 0,
+            duration: 0.5,
+            ease: Power1.easeInOut,
+          });
+          gsap.to(icon, {
+            rotation: 90,
+            duration: 0.3,
+            ease: Power1.easeInOut,
+          });
+        }
+      });
+    });
+  });
+</script>
