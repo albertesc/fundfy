@@ -11,7 +11,7 @@ import shadowImg from "../assets/shadow.png";
     <img
       src={shadowImg.src}
       alt="Shadow"
-      class="absolute top-0 left-0 md:left-auto md:-right-[120px] z-0 opacity-80 max-w-screen"
+      class="shadow-card absolute top-0 left-0 md:left-auto md:-right-[120px] z-0 opacity-80 max-w-screen"
     />
   </div>
 </div>
@@ -32,66 +32,92 @@ import shadowImg from "../assets/shadow.png";
     rotationZ: 14,
   });
 
+  gsap.set(".hero-text-1", {
+    opacity: 1,
+  });
+  gsap.set(".hero-text-2", {
+    opacity: 0,
+  });
+  gsap.set(".hero-text-3", {
+    opacity: 0,
+  });
+
+  gsap.set(".cta-buttons", {
+    opacity: 1,
+  });
+  gsap.set(".shadow-card", {
+    right: "-120px",
+  });
+
   const tl = gsap
     .timeline()
     .to(".credit-card", {
       rotationX: 180,
-      rotationY: 0,
-      rotationZ: 0,
+      duration: 2,
+      delay: 2,
     })
     .to(
       ".credit-card-back",
       {
         rotationX: 180,
-        rotationY: 0,
-        rotationZ: 0,
+        duration: 2,
+      },
+      "<"
+    )
+    .to(
+      ".hero-text-1",
+      {
+        opacity: 0,
+        duration: 0.5,
+      },
+      "<"
+    )
+    .to(
+      ".hero-text-2",
+      {
+        opacity: 1,
+        duration: 0.5,
+        delay: 0.5,
       },
       "<"
     )
     .to(".credit-card", {
       rotationX: 360,
+      duration: 2,
+      delay: 2,
     })
     .to(
       ".credit-card-back",
       {
         rotationX: 360,
+        duration: 2,
       },
       "<"
     )
-    .to(".credit-card", {
-      rotationX: 180,
-      rotationY: 0,
-      rotationZ: 0,
-    })
     .to(
-      ".credit-card-back",
+      ".hero-text-2",
       {
-        rotationX: 180,
-        rotationY: 0,
-        rotationZ: 0,
+        opacity: 0,
+        duration: 0.5,
       },
       "<"
     )
-    .to(".credit-card", {
-      rotationY: -10,
-      rotationX: 360,
-      rotationZ: 14,
-    })
     .to(
-      ".credit-card-back",
+      ".hero-text-3",
       {
-        rotationY: -10,
-        rotationX: 360,
-        rotationZ: 14,
+        opacity: 1,
+        duration: 1,
+        delay: 0.5,
       },
       "<"
-    );
-  /*
+    )
     .to(".credit-card", {
       rotationY: 10,
       rotationX: -4,
       rotationZ: -14,
       left: "50px",
+      duration: 1.5,
+      delay: 2,
     })
     .to(
       ".credit-card-back",
@@ -100,6 +126,32 @@ import shadowImg from "../assets/shadow.png";
         rotationX: -4,
         rotationZ: -14,
         left: "50px",
+        duration: 1.5,
+      },
+      "<"
+    )
+    .to(
+      ".hero-text-3",
+      {
+        opacity: 0,
+        duration: 0.5,
+      },
+      "<"
+    )
+    .to(
+      ".cta-buttons",
+      {
+        opacity: 0,
+      },
+      "<"
+    )
+    .to(
+      ".shadow-card",
+      {
+        right: "auto",
+        left: "-120px",
+        rotate: -60,
+        duration: 1.5,
       },
       "<"
     )
@@ -109,6 +161,8 @@ import shadowImg from "../assets/shadow.png";
       rotationZ: 0,
       left: "50%",
       translateX: "-50%",
+      translateY: "0",
+      duration: 3,
       delay: 3,
     })
     .to(
@@ -119,10 +173,22 @@ import shadowImg from "../assets/shadow.png";
         rotationZ: 0,
         left: "50%",
         translateX: "-50%",
+        translateY: "0",
+        duration: 3,
+      },
+      "<"
+    )
+    .to(
+      ".shadow-card",
+      {
+        rotate: 45,
+        left: "50%",
+        translateX: "-50%",
+        translateY: "18%",
+        duration: 3,
       },
       "<"
     );
-    */
 
   ScrollTrigger.create({
     animation: tl,
