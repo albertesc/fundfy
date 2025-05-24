@@ -1,15 +1,31 @@
 ---
 interface Props {
-  href: string;
+  tag: "a" | "button";
+  href?: string;
+  variant?: "primary" | "secondary" | "ghost";
 }
 
-const { href } = Astro.props;
+const { tag = "a", href, variant = "primary" } = Astro.props;
+const Tag = tag;
 ---
 
-<a
+<Tag
   href={href}
-  class="z-10 font-semibold px-6 h-[40px] bg-primary rounded-full text-dark leading-0 inline-flex items-center justify-center group"
-  role="button"
+  class:list={[
+    "cursor-pointer z-10 font-semibold border px-6 h-[40px] rounded-full text-dark leading-0 inline-flex items-center justify-center group disabled:opacity-20 disabled:pointer-events-none",
+    {
+      "bg-primary hover:bg-[#AFCFC9] active:bg-primary border-primary hover:boder-[#AFCFC9] active:border-primary":
+        variant === "primary",
+    },
+    {
+      "bg-white hover:bg-[#D9D9D9] active:bg-white border-white hover:border-[#D9D9D9] active:border-white":
+        variant === "secondary",
+    },
+    {
+      "bg-transparent hover:bg-[#3C4341] active:bg-transparent border-white text-white":
+        variant === "ghost",
+    },
+  ]}
 >
   <slot />
-</a>
+</Tag>

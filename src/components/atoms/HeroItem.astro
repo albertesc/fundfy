@@ -1,0 +1,27 @@
+---
+interface Props {
+  position?: "left" | "right" | "center";
+}
+
+const { position = "left" } = Astro.props as Props;
+---
+
+<div
+  class="ml-[calc((100vw-1160px)/2)] mr-[calc((100vw-1160px)/2)] max-w-[1160px] flex w-full h-full px-4 absolute top-0 z-30"
+  class:list={[
+    { "justify-end": position === "right" },
+    { "justify-center": position === "center" },
+  ]}
+>
+  <div
+    class="w-full h-72 my-auto flex flex-col justify-end md:relative"
+    class:list={[
+      {
+        "md:w-1/2 md:h-1/2": position === "right" || position === "left",
+        "md:w-full md:h-8/12": position === "center",
+      },
+    ]}
+  >
+    <slot />
+  </div>
+</div>

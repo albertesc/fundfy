@@ -5,3 +5,7 @@
     --color-primary: #91BDB4;
     --color-dark: #242827;
 }
+
+body {
+    scroll-behavior: smooth;
+}

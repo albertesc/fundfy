@@ -1,6 +1,7 @@
 ---
 import image from "../assets/fundfy_logo.svg";
 import Button from "./atoms/Button.astro";
+import Link from "./atoms/Link.astro";
 ---
 
 <header class="fixed top-0 bottom-none z-10 w-full">
@@ -48,37 +49,26 @@ import Button from "./atoms/Button.astro";
           class="menu-list flex gap-[8px] md:gap-[32px] lg:gap-[52px] flex-col md:flex-row text-dark md:text-white text-center md:text-left"
         >
           <li>
-            <a
-              class="font-semibold text-lg md:text-[15px] hover:text-gray-200 transition-colors duration-300"
-              href="#inversion">Inversión</a
-            >
+            <Link href="#inversion">Inversión</Link>
           </li>
           <li>
-            <a
-              class="font-semibold text-lg md:text-[15px] hover:text-gray-200 transition-colors duration-300"
-              href="#experiences">Experiencias</a
-            >
+            <Link href="#experiences">Experiencias</Link>
           </li>
           <li>
-            <a
-              class="font-semibold text-lg md:text-[15px] hover:text-gray-200 transition-colors duration-300"
-              href="#faqs">FAQs</a
-            >
+            <Link href="#faqs">FAQs</Link>
           </li>
           <li>
-            <a
-              class="font-semibold text-lg md:text-[15px] hover:text-gray-200 transition-colors duration-300"
-              href="#join">Hazte socio</a
-            >
+            <Link href="#join">Hazte socio</Link>
           </li>
         </ul>
       </nav>
-      <Button href="#">
+      <Button href="#" tag="a">
         Lanzar App
         <span class="block ml-2 group-hover:translate-x-1 transition-transform"
           >➔</span
         >
       </Button>
+
       <div class="md:hidden z-10">
         <button
           type="button"

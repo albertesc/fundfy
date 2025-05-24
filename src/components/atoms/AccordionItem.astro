@@ -1,0 +1,19 @@
+---
+export interface Props {
+  id: string;
+  title: string;
+}
+const { id, title } = Astro.props;
+---
+
+<button
+  aria-expanded="false"
+  aria-controls={id}
+  class="cursor-pointer font-semibold mb-5 pt-5 border-t border-dark w-full flex justify-between items-center text-left"
+>
+  {title}
+  <span class="inline-block rotate-90">➔</span>
+</button>
+<div id={id} class="panel" role="region" aria-hidden="true">
+  <slot />
+</div>

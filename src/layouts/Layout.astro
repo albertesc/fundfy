@@ -1,6 +1,10 @@
 ---
 import "../styles/global.css";
 import "@fontsource-variable/exo-2";
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Lines from "../components/atoms/Lines.astro";
 ---
 
 <!doctype html>
@@ -14,6 +18,11 @@ import "@fontsource-variable/exo-2";
     <title>Fundfy</title>
   </head>
   <body class="bg-[#242827] text-white">
-    <slot />
+    <Header />
+    <main>
+      <slot />
+      <Footer />
+    </main>
+    <Lines />
   </body>
 </html>

@@ -1,0 +1,82 @@
+<div class="accordion border-b border-dark w-full">
+  <slot />
+</div>
+
+<script>
+  import { gsap, Power1, Elastic } from "gsap";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".accordion > button");
+
+    buttons.forEach((btn) => {
+      const panelId = btn.getAttribute("aria-controls");
+      if (!panelId) return;
+      const panel = document.getElementById(panelId);
+      const icon = btn.querySelector("span");
+      if (!panel || !icon) return;
+
+      gsap.set(panel, { height: 0, overflow: "hidden", opacity: 0 });
+
+      btn.addEventListener("click", () => {
+        const isOpen = btn.getAttribute("aria-expanded") === "true";
+
+        buttons.forEach((otherBtn) => {
+          if (otherBtn !== btn) {
+            const otherPanelId = otherBtn.getAttribute("aria-controls");
+            if (!otherPanelId) return;
+            const otherPanel = document.getElementById(otherPanelId);
+            const otherIcon = otherBtn.querySelector("span");
+            if (!otherPanel || !otherIcon) return;
+            otherBtn.setAttribute("aria-expanded", "false");
+            otherPanel.setAttribute("aria-hidden", "true");
+            gsap.to(otherPanel, {
+              height: 0,
+              opacity: 0,
+              duration: 0.5,
+              ease: Power1.easeInOut,
+            });
+            gsap.to(otherIcon, {
+              rotation: 90,
+              duration: 0.3,
+              ease: Power1.easeInOut,
+            });
+          }
+        });
+
+        if (!isOpen) {
+          btn.setAttribute("aria-expanded", "true");
+          panel.setAttribute("aria-hidden", "false");
+
+          const autoHeight = panel.scrollHeight;
+
+          gsap.to(panel, {
+            height: autoHeight,
+            opacity: 1,
+            duration: 0.8,
+            ease: Elastic.easeOut.config(1, 0.5),
+          });
+          gsap.to(icon, {
+            rotation: 270,
+            duration: 0.5,
+            ease: Power1.easeOut,
+          });
+        } else {
+          btn.setAttribute("aria-expanded", "false");
+          panel.setAttribute("aria-hidden", "true");
+
+          gsap.to(panel, {
+            height: 0,
+            opacity: 0,
+            duration: 0.5,
+            ease: Power1.easeInOut,
+          });
+          gsap.to(icon, {
+            rotation: 90,
+            duration: 0.3,
+            ease: Power1.easeInOut,
+          });
+        }
+      });
+    });
+  });
+</script>
