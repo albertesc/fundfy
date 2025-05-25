@@ -1,13 +1,17 @@
 ---
 interface Props {
   href?: string;
+  dataTime?: string;
+  className?: string;
 }
-const { href } = Astro.props;
+const { href, dataTime, className } = Astro.props;
 ---
 
 <a
   href={href}
-  class="font-semibold text-lg md:text-[15px] hover:text-primary active:text-primary transition-colors duration-300"
+  class="font-semibold text-lg md:text-[15px] hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer"
+  class:list={className ? [className] : []}
+  data-time={dataTime}
 >
   <slot />
 </a>

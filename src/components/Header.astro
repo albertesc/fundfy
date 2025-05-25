@@ -12,7 +12,7 @@ import Link from "./atoms/Link.astro";
   <div
     class="max-w-[1160px] mx-auto flex align-center justify-between px-4 py-6"
   >
-    <a href="/" class="inline-block w-40 lg:w-52 z-10">
+    <a class="logo inline-block w-40 lg:w-52 z-10 cursor-pointer" data-time="0">
       <img src={image.src} alt="Logo" class="w-full h-full" />
     </a>
 
@@ -49,16 +49,17 @@ import Link from "./atoms/Link.astro";
           class="menu-list flex gap-[8px] md:gap-[32px] lg:gap-[52px] flex-col md:flex-row text-dark md:text-white text-center md:text-left"
         >
           <li>
-            <Link href="#inversion">Inversión</Link>
+            <Link dataTime="80" className="inversion-link">Inversión</Link>
           </li>
           <li>
-            <Link href="#experiences">Experiencias</Link>
+            <Link dataTime="225" className="experiences-link">Experiencias</Link
+            >
           </li>
           <li>
-            <Link href="#faqs">FAQs</Link>
+            <Link className="faqs-link" dataTime="435">FAQs</Link>
           </li>
           <li>
-            <Link href="#join">Hazte socio</Link>
+            <Link className="join-link" dataTime="480">Hazte socio</Link>
           </li>
         </ul>
       </nav>
@@ -108,7 +109,9 @@ import Link from "./atoms/Link.astro";
 
     if (!blur || !menuList) return;
 
-    if (rect.top <= 0) {
+    const offset = 100;
+
+    if (rect.top <= offset) {
       blur.classList.add("opacity-100");
       menuList.classList.add("md:text-dark");
       menuList.classList.remove("md:text-white");

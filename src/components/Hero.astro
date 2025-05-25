@@ -3,16 +3,10 @@ import esma from "../assets/esma.svg";
 import HeroItem from "./atoms/HeroItem.astro";
 import TraidingWidget from "./atoms/TraidingWidget.astro";
 import Button from "./atoms/Button.astro";
-import video from "../assets/video.mp4";
-import experience1 from "../assets/experience1.png";
-import experience2 from "../assets/experience2.png";
-import experience3 from "../assets/experience3.png";
-import experience4 from "../assets/experience4.png";
-import experience5 from "../assets/experience5.png";
 ---
 
 <section
-  class="text-wrapper w-screen md:h-screen md:absolute top-0 left-0 pt-32 md:pt-0"
+  class="text-wrapper w-screen md:h-screen md:absolute top-0 left-0 pt-32 md:pt-0 z-30"
 >
   <HeroItem>
     <div class="hero-text-1 absolute top-32 md:top-0 md:left-0 md:w-full">
@@ -60,7 +54,10 @@ import experience5 from "../assets/experience5.png";
   </HeroItem>
 
   <HeroItem position="right">
-    <div class="hero-text-4 absolute top-32 md:top-0 md:left-0 md:w-full">
+    <div
+      class="hero-text-4 absolute top-32 md:top-0 md:left-0 md:w-full"
+      id="inversion"
+    >
       <h2
         class="text-[40px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
       >
@@ -666,53 +663,15 @@ import experience5 from "../assets/experience5.png";
     </div>
   </HeroItem>
 
-  <img
-    class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience1"
-    src={experience1.src}
-    alt="Shadow Card"
-  />
-
-  <img
-    class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience2"
-    src={experience2.src}
-    alt="Shadow Card"
-  />
-
-  <img
-    class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience3"
-    src={experience3.src}
-    alt="Shadow Card"
-  />
-
-  <img
-    class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience4"
-    src={experience4.src}
-    alt="Shadow Card"
-  />
-
-  <img
-    class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience5"
-    src={experience5.src}
-    alt="Shadow Card"
-  />
-
-  <video
-    class="hero-video opacity-20 z-0"
-    src={video}
-    autoplay
-    loop
-    muted
-    playsinline
-    data-figma-skip-parse="true"></video>
-
   <TraidingWidget />
 </section>
 
 <script>
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
   // Set initial styles for the hero section
   gsap.set(".credit-card, .credit-card-back", {
@@ -1158,29 +1117,45 @@ import experience5 from "../assets/experience5.png";
 
     // Fade out the thirteenth text
     .to(".hero-text-13", {
+      duration: 16,
+      top: "350px",
       opacity: 0,
-      duration: 20,
-      top: "-400px",
     })
+
+    .to(
+      ".experience5",
+      {
+        top: "350px",
+        duration: 16,
+      },
+      "<"
+    )
 
     // Card fade and up movement
     .to(
       ".credit-card, .credit-card-back",
       {
-        translateY: "-150px",
-        duration: 30,
-        opacity: 0,
+        rotateX: 180,
+        rotateY: -90,
+        rotateZ: 90,
+        translateY: "400px",
+        duration: 20,
       },
       "<"
     )
     .to(
       ".shadow-card",
       {
-        translateY: "-100px",
-        translateX: "-50%",
-        translateZ: "-50px",
         opacity: 0,
-        duration: 20,
+        duration: 10,
+      },
+      "<"
+    )
+    .to(
+      ".text-wrapper, .card-wrapper",
+      {
+        marginTop: "-100vh",
+        duration: 30,
       },
       "<"
     );
@@ -1193,4 +1168,27 @@ import experience5 from "../assets/experience5.png";
     scrub: true,
     pin: true,
   });
+
+  document
+    .querySelectorAll(
+      ".logo, .experiences-link, .inversion-link, .faqs-link, .join-link"
+    )
+    .forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const targetTime = parseFloat((btn as HTMLElement).dataset.time ?? "0"); // segundos
+        const tlDuration = tl.duration(); // duración total del timeline
+        const st = tl.scrollTrigger;
+
+        if (!st) return;
+
+        const progress = targetTime / tlDuration;
+        const scrollPosition = st.start + (st.end - st.start) * progress;
+
+        gsap.to(window, {
+          scrollTo: { y: scrollPosition },
+          duration: 2,
+          ease: "power2.out",
+        });
+      });
+    });
 </script>
