@@ -6,64 +6,61 @@ import Button from "./atoms/Button.astro";
 ---
 
 <section
-  class="text-wrapper w-screen md:h-screen md:absolute top-0 left-0 pt-32 md:pt-0 z-30"
+  class="text-wrapper w-screen h-screen absolute top-0 left-0 pt-24 md:pt-0 z-30"
 >
   <HeroItem>
-    <div class="hero-text-1 absolute top-32 md:top-0 md:left-0 md:w-full">
+    <div class="hero-text-1 absolute top-24 md:top-0 left-0 w-full px-4">
       <h2
-        class="text-[40px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
+        class="text-[32px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
       >
         Más que un Club de Inversión: transforma tu vida financiera
       </h2>
-      <p class="text-xl font-semibold text-primary text-balance">
+      <p class="text-sm md:text-xl font-semibold text-primary text-balance">
         Operando bajo la licencia MiCA Europea
       </p>
-      <p class="text-lg text-primary text-balance opacity-50">
+      <p class="text-sm md:text-lg text-primary text-balance opacity-50">
         (European Market in Crypto-Assets)
       </p>
       <img src={esma.src} alt="ESMA" class="mt-2" />
     </div>
 
-    <div class="hero-text-2 absolute top-32 md:top-0 md:left-0 md:w-full">
+    <div class="hero-text-2 absolute top-24 md:top-0 left-0 w-full px-4">
       <h2
-        class="text-[40px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
+        class="text-[32px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
       >
         Acceso exclusivo a rentabilidad, estrategia y red profesional
       </h2>
-      <p class="text-xl font-semibold text-primary text-balance">
+      <p class="text-sm md:text-xl font-semibold text-primary text-balance">
         Hemos diseñado una estructura privada para maximizar tu patrimonio
       </p>
     </div>
 
-    <div class="hero-text-3 absolute top-32 md:top-0 md:left-0 md:w-full">
+    <div class="hero-text-3 absolute top-24 md:top-0 left-0 w-full px-4">
       <h2
-        class="text-[40px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
+        class="text-[32px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
       >
         Más que ventajas. Una experiencia exclusiva
       </h2>
-      <p class="text-xl font-semibold text-primary text-balance">
+      <p class="text-sm md:text-xl font-semibold text-primary text-balance">
         No dejamos nada al azar: nos guiamos por el análisis y resultados
         medibles
       </p>
     </div>
 
-    <div class="cta-buttons flex gap-5 mt-16">
+    <div class="cta-buttons flex gap-5 mt-16 px-4">
       <Button tag="a" variant="ghost" href="#"> Saber más </Button>
       <Button tag="a" variant="secondary" href="#"> Únete al club </Button>
     </div>
   </HeroItem>
 
   <HeroItem position="right">
-    <div
-      class="hero-text-4 absolute top-32 md:top-0 md:left-0 md:w-full"
-      id="inversion"
-    >
+    <div class="hero-text-4 absolute top-24 md:top-0 left-0 w-full px-4">
       <h2
-        class="text-[40px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
+        class="text-[32px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
       >
         Liquidez sin concesiones
       </h2>
-      <p class="text-xl font-semibold text-primary text-balance">
+      <p class="text-sm md:text-xl font-semibold text-primary text-balance">
         Rotación rápida de capital con gestión estratégica. Accede a tu
         inversión sin renunciar a rendimiento.
       </p>
@@ -175,7 +172,7 @@ import Button from "./atoms/Button.astro";
         </svg>
 
         <div>
-          <p class="text-xl font-semibold text-primary text-balance">
+          <p class="text-sm md:text-xl font-semibold text-primary text-balance">
             Cartera Anual
           </p>
           <p class="text-balance leading-5 text-[15px]">
@@ -185,13 +182,13 @@ import Button from "./atoms/Button.astro";
       </div>
     </div>
 
-    <div class="hero-text-5 absolute top-32 md:top-0 md:left-0 md:w-full">
+    <div class="hero-text-5 absolute top-24 md:top-0 left-0 w-full px-4">
       <h2
-        class="text-[40px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
+        class="text-[32px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
       >
         Estabilidad con visión estratégica
       </h2>
-      <p class="text-xl font-semibold text-[#AE91BD] text-balance">
+      <p class="text-sm md:text-xl font-semibold text-[#AE91BD] text-balance">
         Rentabilidad sólida en ciclos de mercado, con la flexibilidad de
         revisiones periódicas.
       </p>
@@ -307,7 +304,9 @@ import Button from "./atoms/Button.astro";
         </svg>
 
         <div>
-          <p class="text-xl font-semibold text-[#AE91BD] text-balance">
+          <p
+            class="text-sm md:text-xl font-semibold text-[#AE91BD] text-balance"
+          >
             Cartera Semestral
           </p>
           <p class="text-balance leading-5 text-[15px]">
@@ -317,13 +316,13 @@ import Button from "./atoms/Button.astro";
       </div>
     </div>
 
-    <div class="hero-text-6 absolute top-32 md:top-0 md:left-0 md:w-full">
+    <div class="hero-text-6 absolute top-24 md:top-0 left-0 w-full px-4">
       <h2
-        class="text-[40px] lg:text-[50px] font-light leading-none mb-3.5 text-balance"
+        class="text-[32px] lg:text-[50px] font-light leading-none mb-3.5 text-balance"
       >
         Consolidación y estrategia a largo plazo
       </h2>
-      <p class="text-xl font-semibold text-[#91A7BD] text-balance">
+      <p class="text-sm md:text-xl font-semibold text-[#91A7BD] text-balance">
         Un modelo de gestión pensado para construir valor real y sostenible.
       </p>
       <div
@@ -448,13 +447,13 @@ import Button from "./atoms/Button.astro";
       </div>
     </div>
 
-    <div class="hero-text-7 absolute top-32 md:top-0 md:left-0 md:w-full">
+    <div class="hero-text-7 absolute top-24 md:top-0 left-0 w-full px-4">
       <h2
-        class="text-[40px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
+        class="text-[32px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
       >
         Sin calendario. Invierte a tu ritmo
       </h2>
-      <p class="text-xl font-semibold text-[#BD91A0] text-balance">
+      <p class="text-sm md:text-xl font-semibold text-[#BD91A0] text-balance">
         Entra en el mercado cuando lo necesites e invierte en oportunidades
         únicas.
       </p>
@@ -570,7 +569,9 @@ import Button from "./atoms/Button.astro";
         </svg>
 
         <div>
-          <p class="text-xl font-semibold text-[#BD91A0] text-balance">
+          <p
+            class="text-sm md:text-xl font-semibold text-[#BD91A0] text-balance"
+          >
             Cartera Spot
           </p>
           <p class="text-balance leading-5 text-[15px]">Sin APR máximo</p>
@@ -578,19 +579,19 @@ import Button from "./atoms/Button.astro";
       </div>
     </div>
 
-    <div class="app-button flex gap-5 mt-16">
+    <div class="app-button flex gap-5 mt-16 px-4">
       <Button tag="a" variant="secondary" href="#"> Lanzar App </Button>
     </div>
   </HeroItem>
 
   <HeroItem position="center">
-    <div class="hero-text-8 absolute top-32 md:top-0 md:left-0 md:w-full">
-      <p class="text-center text-xl text-primary mb-8">
+    <div class="hero-text-8 absolute top-24 md:top-0 left-0 w-full px-4">
+      <p class="text-center md:text-xl text-primary mb-8">
         <strong class="text-semibold">Club Fundfy</strong>: forma parte de una
         red privada de inversores
       </p>
       <h2
-        class="text-center text-[40px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
+        class="text-center text-[24px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
       >
         Acceso exclusivo a nuestra membresía para impulsar tu crecimiento
         financiero
@@ -599,12 +600,12 @@ import Button from "./atoms/Button.astro";
   </HeroItem>
 
   <HeroItem position="center">
-    <div class="hero-text-9 absolute top-32 md:top-0 md:left-0 md:w-full">
-      <p class="text-center text-xl text-primary mb-8">
+    <div class="hero-text-9 absolute top-24 md:top-0 left-0 w-full px-4">
+      <p class="text-center md:text-xl text-primary mb-8">
         <strong class="text-semibold">Experiencias</strong> Más que inversión
       </p>
       <h2
-        class="text-center text-[40px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
+        class="text-center text-[32px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
       >
         Luxe SuperCars
       </h2>
@@ -612,12 +613,12 @@ import Button from "./atoms/Button.astro";
   </HeroItem>
 
   <HeroItem position="center">
-    <div class="hero-text-10 absolute top-32 md:top-0 md:left-0 md:w-full">
-      <p class="text-center text-xl text-primary mb-8">
+    <div class="hero-text-10 absolute top-24 md:top-0 left-0 w-full px-4">
+      <p class="text-center md:text-xl text-primary mb-8">
         <strong class="text-semibold">Experiencias</strong> Más que inversión
       </p>
       <h2
-        class="text-center text-[40px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
+        class="text-center text-[32px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
       >
         Sailing yachting
       </h2>
@@ -625,12 +626,12 @@ import Button from "./atoms/Button.astro";
   </HeroItem>
 
   <HeroItem position="center">
-    <div class="hero-text-11 absolute top-32 md:top-0 md:left-0 md:w-full">
-      <p class="text-center text-xl text-primary mb-8">
+    <div class="hero-text-11 absolute top-24 md:top-0 left-0 w-full px-4">
+      <p class="text-center md:text-xl text-primary mb-8">
         <strong class="text-semibold">Experiencias</strong> Más que inversión
       </p>
       <h2
-        class="text-center text-[40px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
+        class="text-center text-[32px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
       >
         Events
       </h2>
@@ -638,12 +639,12 @@ import Button from "./atoms/Button.astro";
   </HeroItem>
 
   <HeroItem position="center">
-    <div class="hero-text-12 absolute top-32 md:top-0 md:left-0 md:w-full">
-      <p class="text-center text-xl text-primary mb-8">
+    <div class="hero-text-12 absolute top-24 md:top-0 left-0 w-full px-4">
+      <p class="text-center md:text-xl text-primary mb-8">
         <strong class="text-semibold">Experiencias</strong> Más que inversión
       </p>
       <h2
-        class="text-center text-[40px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
+        class="text-center text-[32px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
       >
         Suscriptions
       </h2>
@@ -651,12 +652,12 @@ import Button from "./atoms/Button.astro";
   </HeroItem>
 
   <HeroItem position="center">
-    <div class="hero-text-13 absolute top-32 md:top-0 md:left-0 md:w-full">
-      <p class="text-center text-xl text-primary mb-8">
+    <div class="hero-text-13 absolute top-24 md:top-0 left-0 w-full px-4">
+      <p class="text-center md:text-xl text-primary mb-8">
         <strong class="text-semibold">Experiencias</strong> Más que inversión
       </p>
       <h2
-        class="text-center text-[40px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
+        class="text-center text-[32px] lg:text-[56px] font-light leading-none mb-3.5 text-balance"
       >
         y mucho más...
       </h2>
@@ -721,19 +722,11 @@ import Button from "./atoms/Button.astro";
   const tl = gsap
     .timeline()
     // Flip the credit card
-    .to(".credit-card", {
+    .to(".credit-card, .credit-card-back", {
       rotationX: 180,
       duration: 14,
       delay: 6,
     })
-    .to(
-      ".credit-card-back",
-      {
-        rotationX: 180,
-        duration: 14,
-      },
-      "<"
-    )
 
     // Fade out the first text
     .to(
@@ -752,19 +745,11 @@ import Button from "./atoms/Button.astro";
     })
 
     // Flip the credit card
-    .to(".credit-card", {
+    .to(".credit-card, .credit-card-back", {
       rotationX: 360,
       duration: 14,
       delay: 6,
     })
-    .to(
-      ".credit-card-back",
-      {
-        rotationX: 360,
-        duration: 14,
-      },
-      "<"
-    )
 
     // Fade out the second text
     .to(
@@ -783,7 +768,7 @@ import Button from "./atoms/Button.astro";
     })
 
     // Flip the credit card right to left
-    .to(".credit-card", {
+    .to(".credit-card, .credit-card-back", {
       rotationY: 10,
       rotationX: -4,
       rotationZ: -14,
@@ -791,17 +776,6 @@ import Button from "./atoms/Button.astro";
       duration: 14,
       delay: 6,
     })
-    .to(
-      ".credit-card-back",
-      {
-        rotationY: 10,
-        rotationX: -4,
-        rotationZ: -14,
-        left: "50px",
-        duration: 14,
-      },
-      "<"
-    )
 
     // Fade out tradingview-widget-container
     .to(
@@ -937,27 +911,14 @@ import Button from "./atoms/Button.astro";
 
     // Final flip of the credit card
     .to(
-      ".credit-card",
+      ".credit-card, .credit-card-back",
       {
         rotationX: 360,
         rotationY: 0,
         rotationZ: 0,
         left: "50%",
         translateX: "-50%",
-        translateY: "0",
-        duration: 20,
-      },
-      "<"
-    )
-    .to(
-      ".credit-card-back",
-      {
-        rotationX: 360,
-        rotationY: 0,
-        rotationZ: 0,
-        left: "50%",
-        translateX: "-50%",
-        translateY: "0",
+        translateY: "-50px",
         duration: 20,
       },
       "<"
@@ -1122,15 +1083,6 @@ import Button from "./atoms/Button.astro";
       opacity: 0,
     })
 
-    .to(
-      ".experience5",
-      {
-        top: "350px",
-        duration: 16,
-      },
-      "<"
-    )
-
     // Card fade and up movement
     .to(
       ".credit-card, .credit-card-back",
@@ -1169,26 +1121,22 @@ import Button from "./atoms/Button.astro";
     pin: true,
   });
 
-  document
-    .querySelectorAll(
-      ".logo, .experiences-link, .inversion-link, .faqs-link, .join-link"
-    )
-    .forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const targetTime = parseFloat((btn as HTMLElement).dataset.time ?? "0"); // segundos
-        const tlDuration = tl.duration(); // duración total del timeline
-        const st = tl.scrollTrigger;
+  document.querySelectorAll(".logo, .animated-link").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const targetTime = parseFloat((btn as HTMLElement).dataset.time ?? "0"); // segundos
+      const tlDuration = tl.duration(); // duración total del timeline
+      const st = tl.scrollTrigger;
 
-        if (!st) return;
+      if (!st) return;
 
-        const progress = targetTime / tlDuration;
-        const scrollPosition = st.start + (st.end - st.start) * progress;
+      const progress = targetTime / tlDuration;
+      const scrollPosition = st.start + (st.end - st.start) * progress;
 
-        gsap.to(window, {
-          scrollTo: { y: scrollPosition },
-          duration: 2,
-          ease: "power2.out",
-        });
+      gsap.to(window, {
+        scrollTo: { y: scrollPosition },
+        duration: 2,
+        ease: "power2.out",
       });
     });
+  });
 </script>

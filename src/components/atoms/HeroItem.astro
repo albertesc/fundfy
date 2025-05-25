@@ -7,18 +7,20 @@ const { position = "left" } = Astro.props as Props;
 ---
 
 <div
-  class="ml-[calc((100vw-1160px)/2)] mr-[calc((100vw-1160px)/2)] max-w-[1160px] flex w-full h-full px-4 absolute top-0"
+  class="lg:ml-[calc((100vw-1160px)/2)] lg:mr-[calc((100vw-1160px)/2)] flex items-center h-full absolute top-0 left-0 right-0 bottom-0"
   class:list={[
     { "justify-end": position === "right" },
     { "justify-center": position === "center" },
   ]}
 >
   <div
-    class="w-full h-72 my-auto flex flex-col justify-end md:relative"
+    class="w-full my-auto flex flex-col justify-end md:relative"
     class:list={[
       {
+        "h-24": position === "right",
+        "": position === "right",
         "md:w-1/2 md:h-1/2": position === "right" || position === "left",
-        "md:w-full md:h-8/12": position === "center",
+        "md:h-8/12": position === "center",
       },
     ]}
   >

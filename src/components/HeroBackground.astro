@@ -1,15 +1,13 @@
 ---
-import video from "../../assets/video.mp4";
-import experience1 from "../../assets/experience1.png";
-import experience2 from "../../assets/experience2.png";
-import experience3 from "../../assets/experience3.png";
-import experience4 from "../../assets/experience4.png";
-import experience5 from "../../assets/experience5.png";
+import video from "../assets/video.mp4";
+import experience1 from "../assets/experience1.png";
+import experience2 from "../assets/experience2.png";
+import experience3 from "../assets/experience3.png";
+import experience4 from "../assets/experience4.png";
+import experience5 from "../assets/experience5.png";
 ---
 
-<section
-  class="text-wrapper w-screen md:h-screen md:absolute top-0 left-0 pt-32 md:pt-0 z-0"
->
+<section class="w-screen h-screen absolute top-0 left-0 pt-0 -z-1">
   <img
     class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience1"
     src={experience1.src}
@@ -41,7 +39,7 @@ import experience5 from "../../assets/experience5.png";
   />
 
   <video
-    class="hero-video opacity-20 z-0 relative"
+    class="hero-video absolute top-0 right-0 z-0 w-screen h-screen object-cover"
     src={video}
     autoplay
     loop

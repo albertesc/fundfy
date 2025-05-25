@@ -4,14 +4,16 @@ import cardBackImg from "../assets/card-back.png";
 import shadowImg from "../assets/shadow.png";
 ---
 
-<div class="card-wrapper z-20 relative">
-  <div class="max-w-[1160px] mx-auto w-full px-16 relative">
+<div class="card-wrapper z-20 relative h-screen">
+  <div
+    class="max-w-[1160px] mx-auto w-full px-16 relative h-1/2 md:h-full mt-auto"
+  >
     <img src={cardImg.src} alt="Card" class="credit-card z-10" />
     <img src={cardBackImg.src} alt="Card" class="credit-card-back z-10" />
     <img
       src={shadowImg.src}
       alt="Shadow"
-      class="shadow-card absolute top-0 left-0 md:left-auto md:-right-[120px] z-0 max-w-screen"
+      class="shadow-card absolute top-0 left-0 md:left-auto md:-right-[120px] z-0 max-w-screen hidden md:block"
     />
   </div>
 </div>
@@ -22,12 +24,6 @@ import shadowImg from "../assets/shadow.png";
     width: 100vw;
     display: flex;
     justify-content: center;
-  }
-
-  @media (max-width: 768px) {
-    .card-wrapper {
-      height: 50vh;
-    }
   }
 
   .credit-card,
@@ -48,7 +44,7 @@ import shadowImg from "../assets/shadow.png";
   @media (max-width: 768px) {
     .credit-card,
     .credit-card-back {
-      width: 300px;
+      width: 260px;
       align-items: flex-start;
       justify-content: flex-start;
     }

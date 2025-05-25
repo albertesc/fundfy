@@ -11,31 +11,31 @@ import Link from "./atoms/Link.astro";
     <div>
       <img src={image.src} alt="Logo" class="w-40 mb-2.5 mx-auto md:mx-0" />
       <p class="font-semibold text-xl mb-11">Tu Club de Inversión</p>
-      <Button tag="a" href="#">Únete al Club</Button>
+      <Button tag="a">Únete al Club</Button>
     </div>
     <nav>
       <ul>
         <li>
-          <Link href="#">Inicio</Link>
+          <Link className="animated-link" dataTime="0">Inicio</Link>
         </li>
         <li>
-          <Link href="#">Nosotros</Link>
+          <Link className="animated-link" dataTime="0">Nosotros</Link>
         </li>
         <li>
-          <Link href="#">Inversión</Link>
+          <Link className="animated-link" dataTime="80">Inversión</Link>
         </li>
       </ul>
     </nav>
     <nav>
       <ul>
         <li>
-          <Link href="#">Experiencias</Link>
+          <Link className="animated-link" dataTime="225">Experiencias</Link>
         </li>
         <li>
-          <Link href="#">FAQS</Link>
+          <Link className="animated-link" dataTime="435">FAQS</Link>
         </li>
         <li>
-          <Link href="#">Contacto</Link>
+          <Link className="animated-link" dataTime="480">Contacto</Link>
         </li>
       </ul>
     </nav>
