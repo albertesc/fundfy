@@ -1,0 +1,46 @@
+---
+import Button from "../atoms/Button.astro";
+import Link from "../atoms/Link.astro";
+---
+
+<div class="hidden md:flex gap-14 items-center z-10">
+  <nav role="navigation" aria-label="Menú principal">
+    <ul class="menu-list flex items-center gap-14">
+      <li>
+        <Link
+          dataTime="80"
+          className="animated-link text-[15px] font-semibold md:mb-0"
+          >Inversión</Link
+        >
+      </li>
+      <li>
+        <Link
+          dataTime="225"
+          className="animated-link text-[15px] font-semibold md:mb-0"
+          >Experiencias</Link
+        >
+      </li>
+      <li>
+        <Link
+          className="animated-link text-[15px] font-semibold md:mb-0"
+          dataTime="435">FAQs</Link
+        >
+      </li>
+      <li>
+        <Link
+          className="animated-link text-[15px] font-semibold md:mb-0"
+          dataTime="480">Hazte socio</Link
+        >
+      </li>
+    </ul>
+  </nav>
+
+  <div class="">
+    <Button href="#" tag="a">
+      Lanzar App
+      <span class="block ml-2 group-hover:translate-x-1 transition-transform"
+        >➔</span
+      >
+    </Button>
+  </div>
+</div>

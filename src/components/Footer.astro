@@ -1,10 +1,10 @@
 ---
 import image from "../assets/fundfy_logo.svg";
 import Button from "./atoms/Button.astro";
-import Link from "./atoms/Link.astro";
+import a from "./atoms/Link.astro";
 ---
 
-<footer class="pt-20 pb-5 bg-dark">
+<footer class="pt-20 pb-5 bg-dark text-white mt-auto">
   <div
     class="max-w-[1160px] mx-auto w-full px-4 relative grid grid-cols-1 md:grid-cols-4 gap-4 text-center md:text-left"
   >
@@ -16,45 +16,66 @@ import Link from "./atoms/Link.astro";
     <nav>
       <ul>
         <li>
-          <Link className="animated-link" dataTime="0">Inicio</Link>
+          <a
+            class="md:hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer animated-link"
+            data-time="0">Inicio</a
+          >
         </li>
         <li>
-          <Link className="animated-link" dataTime="0">Nosotros</Link>
+          <a
+            class="md:hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer animated-link"
+            data-time="80">Inversión</a
+          >
         </li>
         <li>
-          <Link className="animated-link" dataTime="80">Inversión</Link>
-        </li>
-      </ul>
-    </nav>
-    <nav>
-      <ul>
-        <li>
-          <Link className="animated-link" dataTime="225">Experiencias</Link>
-        </li>
-        <li>
-          <Link className="animated-link" dataTime="435">FAQS</Link>
-        </li>
-        <li>
-          <Link className="animated-link" dataTime="480">Contacto</Link>
+          <a
+            class="md:hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer animated-link"
+            data-time="0">Experiencias</a
+          >
         </li>
       </ul>
     </nav>
     <nav>
       <ul>
         <li>
-          <Link href="/privacy">Política de Privacidad</Link>
+          <a
+            class="md:hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer animated-link"
+            data-time="435">FAQS</a
+          >
         </li>
         <li>
-          <Link href="/cookies">Política de Cookies</Link>
+          <a
+            class="md:hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer animated-link"
+            data-time="480">Contacto</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li>
+          <a
+            class="md:hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer"
+            href="/privacy">Política de Privacidad</a
+          >
         </li>
         <li>
-          <Link href="/conditions">Condiciones generales</Link>
+          <a
+            class="md:hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer"
+            href="/cookies">Política de Cookies</a
+          >
+        </li>
+        <li>
+          <a
+            class="md:hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer"
+            href="/conditions">Condiciones generales</a
+          >
         </li>
       </ul>
     </nav>
   </div>
 
   <p class="text-center mt-11 text-[14px] opacity-40 px-4">
-    Fundfy Investment Club SL ©2005 Todos los derechos reservados
+    Fundfy Investment Club SL ©2025 Todos los derechos reservados
   </p>
 </footer>

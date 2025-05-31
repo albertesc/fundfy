@@ -5,43 +5,57 @@ import experience2 from "../assets/experience2.png";
 import experience3 from "../assets/experience3.png";
 import experience4 from "../assets/experience4.png";
 import experience5 from "../assets/experience5.png";
+import experience6 from "../assets/experience6.png";
 ---
 
 <section class="w-screen h-screen absolute top-0 left-0 pt-0 -z-1">
   <img
     class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience1"
     src={experience1.src}
-    alt="Shadow Card"
   />
 
   <img
     class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience2"
     src={experience2.src}
-    alt="Shadow Card"
   />
 
   <img
     class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience3"
     src={experience3.src}
-    alt="Shadow Card"
   />
 
   <img
     class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience4"
     src={experience4.src}
-    alt="Shadow Card"
   />
 
   <img
     class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience5"
     src={experience5.src}
-    alt="Shadow Card"
+  />
+
+  <img
+    class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience6"
+    src={experience6.src}
   />
 
   <video
     class="hero-video absolute top-0 right-0 z-0 w-screen h-screen object-cover"
+    id="videoElem"
     src={video}
     autoplay
     loop
     muted></video>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.body.addEventListener("touchstart", playVideo);
+    function playVideo() {
+      const video = document.getElementById("videoElem");
+      if (video && video instanceof HTMLVideoElement) {
+        video.play();
+      }
+    }
+  });
+</script>

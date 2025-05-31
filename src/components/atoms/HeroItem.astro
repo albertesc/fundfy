@@ -14,13 +14,12 @@ const { position = "left" } = Astro.props as Props;
   ]}
 >
   <div
-    class="w-full my-auto flex flex-col justify-end md:relative"
+    class="w-full my-auto flex flex-col justify-start md:justify-center relative"
     class:list={[
       {
-        "h-24": position === "right",
-        "": position === "right",
-        "md:w-1/2 md:h-1/2": position === "right" || position === "left",
-        "md:h-8/12": position === "center",
+        "md:w-1/2 h-[75dvh] md:h-1/2":
+          position === "right" || position === "left",
+        "h-[75dvh] md:h-8/12": position === "center",
       },
     ]}
   >

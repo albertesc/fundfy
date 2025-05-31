@@ -17,12 +17,11 @@ import Lines from "../components/atoms/Lines.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Fundfy</title>
   </head>
-  <body class="bg-[#242827] text-white overflow-x-hidden">
+  <body>
     <Header />
-    <main>
+    <main class="flex flex-col min-h-screen bg-white">
       <slot />
       <Footer />
     </main>
-    <Lines />
   </body>
 </html>

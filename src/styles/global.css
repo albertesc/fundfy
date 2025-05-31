@@ -1,11 +1,129 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
-    --font-sans: 'Exo 2 Variable', sans-serif;
-    --color-primary: #91BDB4;
-    --color-dark: #242827;
+  --font-sans: "Exo 2 Variable", sans-serif;
+  --color-primary: #91bdb4;
+  --color-dark: #242827;
 }
 
 body {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+.card-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.credit-card,
+.credit-card-back {
+  width: 440px;
+  aspect-ratio: 1.55/1;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform-origin: center;
+  top: 50%;
+
+  transform-style: preserve-3d;
+  transform: perspective(500px) translateY(-50%) rotateY(-10deg) rotateX(4deg)
+    rotateZ(14deg);
+  right: 50px;
+}
+
+@media (max-width: 768px) {
+  .credit-card,
+  .credit-card-back {
+    width: 280px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.credit-card {
+  backface-visibility: hidden;
+}
+
+.credit-card-back {
+  z-index: 1;
+}
+
+.shadow-card {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: -1;
+  opacity: 0.5;
+  right: -120px;
+  left: auto;
+}
+
+@media (max-width: 768px) {
+  .shadow-card {
+    transform-origin: center;
+    bottom: 0 !important;
+    top: inherit !important;
+    transform: none !important;
+    transform: rotate(235deg) !important;
+    left: 0 !important;
+    width: 100% !important;
+    opacity: 0.7;
+  }
+}
+
+.hero-text-1 {
+  opacity: 1;
+  top: 0;
+}
+
+.hero-text-2,
+.hero-text-3 {
+  opacity: 0;
+  top: -100px;
+}
+
+.hero-text-2,
+.hero-text-3,
+.hero-text-4,
+.hero-text-5,
+.hero-text-6,
+.hero-text-7,
+.hero-text-8,
+.hero-text-9,
+.hero-text-10,
+.hero-text-11,
+.hero-text-12,
+.hero-text-13,
+.hero-text-14,
+.experience1,
+.experience2,
+.experience3,
+.experience4,
+.experience5,
+.experience6 {
+  opacity: 0;
+}
+
+.cta-buttons {
+  opacity: 1;
+}
+
+.app-button {
+  opacity: 0;
+}
+
+.hero-video {
+  opacity: 0;
+}
+
+.tradingview-widget-container {
+  opacity: 1;
 }

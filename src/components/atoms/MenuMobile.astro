@@ -1,0 +1,166 @@
+---
+import image from "../../assets/fundfy_logo.svg";
+import Button from "../atoms/Button.astro";
+import Link from "../atoms/Link.astro";
+---
+
+<div
+  class="fixed flex flex-col items-start w-full h-full md:h-auto inset-0 bg-white z-50 text-dark p-10 scale-y-0"
+  id="nav-menu"
+>
+  <a class="logo inline-block w-36 mb-12 z-10 cursor-pointer" data-time="0">
+    <img src={image.src} alt="Logo" class="w-full h-full" />
+  </a>
+
+  <nav role="navigation" aria-label="Menú principal" class="">
+    <ul class="menu-list">
+      <li class="md:opacity-100">
+        <Link dataTime="80" className="animated-link">Inversión</Link>
+      </li>
+      <li>
+        <Link dataTime="225" className="animated-link">Experiencias</Link>
+      </li>
+      <li>
+        <Link className="animated-link" dataTime="435">FAQs</Link>
+      </li>
+      <li>
+        <Link className="animated-link" dataTime="480">Hazte socio</Link>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="">
+    <Button href="#" tag="a">
+      Lanzar App
+      <span class="block ml-2 group-hover:translate-x-1 transition-transform"
+        >➔</span
+      >
+    </Button>
+  </div>
+
+  <div class="text-center mt-auto w-full" id="close-menu-btn">
+    <span class="sr-only"> Cerrar menú </span>
+    <button class="text-dark" aria-label="Cerrar menú">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        class="size-8"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<div class="md:hidden z-10 flex itmes-center">
+  <button
+    type="button"
+    id="hamburger-btn"
+    class="flex items-center m-auto"
+    aria-controls="navbar-default"
+    aria-expanded="false"
+  >
+    <span class="sr-only">Abrir menú</span>
+    <svg
+      width="28"
+      height="14"
+      viewBox="0 0 28 14"
+      fill="none"
+      stroke="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M2.37305 1.52539H26.373"
+        stroke="currentColor"
+        stroke-width="3"
+        stroke-linecap="round"></path>
+      <path
+        d="M2.37305 11.5254H26.373"
+        stroke="currentColor"
+        stroke-width="3"
+        stroke-linecap="round"></path>
+    </svg>
+  </button>
+</div>
+
+<script>
+  import gsap from "gsap";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const menu = document.querySelector("#nav-menu");
+    const abrirBtn = document.querySelector("#hamburger-btn");
+    const cerrarBtn = document.querySelector("#close-menu-btn button");
+
+    if (menu) {
+      const logoMenu = menu.querySelector("a.logo");
+      const menuLinks = menu.querySelectorAll(".menu-list li");
+      const ctaBtn = menu.querySelector("a[href='#']");
+      let tlMenu: gsap.core.Timeline;
+
+      gsap.set(menu, {
+        transformOrigin: "top center",
+      });
+
+      tlMenu = gsap.timeline({ paused: true });
+      tlMenu
+        .to(menu, {
+          duration: 1,
+          scaleY: 1,
+          ease: "elastic.out(1, 0.7)",
+        })
+
+        .from(
+          logoMenu,
+          {
+            y: -20,
+            opacity: 0,
+            duration: 0.3,
+            ease: "back.out(1.2)",
+          },
+          "-=0.5"
+        )
+
+        .from(
+          menuLinks,
+          {
+            y: -20,
+            opacity: 0,
+            stagger: 0.08,
+            duration: 0.3,
+            ease: "back.out(1.2)",
+          },
+          "-=0.2"
+        )
+
+        .from(
+          ctaBtn,
+          {
+            y: -20,
+            opacity: 0,
+            duration: 0.3,
+            ease: "back.out(1.2)",
+          },
+          "-=0.15"
+        );
+
+      function abrirMenu() {
+        tlMenu.play();
+      }
+
+      function cerrarMenu() {
+        tlMenu.reverse();
+      }
+
+      if (abrirBtn) abrirBtn.addEventListener("click", abrirMenu);
+      if (cerrarBtn) cerrarBtn.addEventListener("click", cerrarMenu);
+
+      menuLinks.forEach((li) => li.addEventListener("click", cerrarMenu));
+    }
+  });
+</script>

@@ -6,55 +6,10 @@ import shadowImg from "../assets/shadow.png";
 
 <div class="card-wrapper z-20 relative h-screen">
   <div
-    class="max-w-[1160px] mx-auto w-full px-16 relative h-1/2 md:h-full mt-auto"
+    class="card-container max-w-[1160px] mx-auto w-full px-16 relative h-[53dvh] md:h-full mt-auto overflow-hidden md:overflow-visible"
   >
     <img src={cardImg.src} alt="Card" class="credit-card z-10" />
     <img src={cardBackImg.src} alt="Card" class="credit-card-back z-10" />
-    <img
-      src={shadowImg.src}
-      alt="Shadow"
-      class="shadow-card absolute top-0 left-0 md:left-auto md:-right-[120px] z-0 max-w-screen hidden md:block"
-    />
+    <img src={shadowImg.src} alt="Shadow" class="shadow-card" />
   </div>
 </div>
-
-<style>
-  .card-wrapper {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-  }
-
-  .credit-card,
-  .credit-card-back {
-    width: 440px;
-    aspect-ratio: 1.55/1;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    transform-origin: center;
-    top: 50%;
-  }
-
-  @media (max-width: 768px) {
-    .credit-card,
-    .credit-card-back {
-      width: 260px;
-      align-items: flex-start;
-      justify-content: flex-start;
-    }
-  }
-
-  .credit-card {
-    backface-visibility: hidden;
-  }
-
-  .credit-card-back {
-    z-index: 1;
-  }
-</style>

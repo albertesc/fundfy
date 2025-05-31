@@ -6,7 +6,7 @@ import Button from "./atoms/Button.astro";
 import { actions } from "astro:actions";
 ---
 
-<section class="pb-12 md:py-24 bg-white text-dark z-20 relative">
+<section class="pb-12 md:py-24 bg-white text-dark z-20 relative" id="join">
   <div class="relative">
     <div class="md:absolute inset-y-0 right-0 w-full md:w-[40%] h-full">
       <img
@@ -34,13 +34,19 @@ import { actions } from "astro:actions";
           >
             <fieldset>
               <div class="flex flex-col gap-2.5">
-                <Input name="company" label="Nombre completo*:" required />
-                <Input name="email" label="Email*:" required />
-                <Input name="subject" label="Asunto:" />
-                <Textarea name="message" label="Mensaje:" />
+                <Input name="company" label="Nombre completo*" required />
+                <Input name="email" label="Email*" required />
+                <Input name="subject" label="Asunto" />
+                <Textarea name="message" label="Mensaje" />
               </div>
 
               <p class="text-sm mt-4 mb-6">* Campos obligatorios</p>
+
+              <span class="success-message text-primary mt-4 hidden">
+                Tu email se ha enviado correctamente.<br />En breve nos
+                pondremos en contacto. Gracias.
+              </span>
+
               <Button tag="button">Enviar</Button>
             </fieldset>
 
@@ -100,7 +106,7 @@ import { actions } from "astro:actions";
 
       if (!valid) return;
 
-      showSuccess("Formulario enviado con éxito");
+      showSuccess();
 
       const formData = new FormData(form);
       fetch(form.action, {
@@ -124,13 +130,14 @@ import { actions } from "astro:actions";
       input.classList.add("placeholder-red-400");
     }
 
-    function showSuccess(message: string) {
-      const el = document.createElement("p");
-      el.className = "success-message text-green-600 text-sm mt-4";
-      el.innerText = message;
-      if (form) {
-        form.appendChild(el);
+    function showSuccess() {
+      if (!form) return;
+      const successMessage = form.querySelector(".success-message");
+      if (successMessage) {
+        successMessage.classList.remove("hidden");
+        successMessage.classList.add("block");
       }
+      form.reset();
     }
   });
 </script>
