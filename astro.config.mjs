@@ -11,5 +11,15 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   output: 'server',
+
+  i18n: {
+    defaultLocale: "en",
+    locales: ["es", "en"],
+    routing: {
+      prefixDefaultLocale: false,
+      redirectToDefaultLocale: true,
+    }
+  },
+
   adapter: vercel()
 });

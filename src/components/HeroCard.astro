@@ -1,15 +1,35 @@
 ---
-import cardImg from "../assets/card-front.png";
-import cardBackImg from "../assets/card-back.png";
-import shadowImg from "../assets/shadow.png";
+import cardImg from "@assets/card-front.png";
+import cardBackImg from "@assets/card-back.png";
+import shadowImg from "@assets/shadow.png";
+import shadow2Img from "@assets/shadow2.png";
+import shadow3Img from "@assets/shadow3.png";
+import shadow4Img from "@assets/shadow4.png";
 ---
 
-<div class="card-wrapper z-20 relative h-screen">
+<div class="card-wrapper z-20 relative h-screen md:pr-4">
   <div
-    class="card-container max-w-[1160px] mx-auto w-full px-16 relative h-[53dvh] md:h-full mt-auto overflow-hidden md:overflow-visible"
+    class="card-container max-w-[1160px] mx-auto w-full px-4 relative h-[53dvh] md:h-full mt-auto overflow-hidden md:overflow-visible"
   >
     <img src={cardImg.src} alt="Card" class="credit-card z-10" />
     <img src={cardBackImg.src} alt="Card" class="credit-card-back z-10" />
-    <img src={shadowImg.src} alt="Shadow" class="shadow-card" />
+    <div class="shadow-card relative">
+      <img src={shadowImg.src} alt="Shadow" class="shadow1" />
+      <img
+        src={shadow2Img.src}
+        alt="Shadow"
+        class="shadow2 absolute top-0 left-0 opacity-0"
+      />
+      <img
+        src={shadow3Img.src}
+        alt="Shadow"
+        class="shadow3 absolute top-0 left-0 opacity-0"
+      />
+      <img
+        src={shadow4Img.src}
+        alt="Shadow"
+        class="shadow4 absolute top-0 left-0 opacity-0"
+      />
+    </div>
   </div>
 </div>

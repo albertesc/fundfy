@@ -1,46 +1,58 @@
 ---
-import video from "../assets/video.mp4";
-import experience1 from "../assets/experience1.png";
-import experience2 from "../assets/experience2.png";
-import experience3 from "../assets/experience3.png";
-import experience4 from "../assets/experience4.png";
-import experience5 from "../assets/experience5.png";
-import experience6 from "../assets/experience6.png";
+import video from "@assets/video.mp4";
+import experience1 from "@assets/experience1.png";
+import experience2 from "@assets/experience2.png";
+import experience3 from "@assets/experience3.png";
+import experience4 from "@assets/experience4.png";
+import experience5 from "@assets/experience5.png";
+import experience6 from "@assets/experience6.png";
+
+const classes = {
+  video:
+    "hero-video absolute top-0 right-0 z-0 w-screen h-screen object-cover pointer-events-none hidden md:block",
+  experience: "absolute top-0 right-0 z-0 w-screen h-screen object-cover",
+};
 ---
 
 <section class="w-screen h-screen absolute top-0 left-0 pt-0 -z-1">
   <img
-    class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience1"
+    class="experience1"
+    class:list={classes.experience}
     src={experience1.src}
   />
 
   <img
-    class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience2"
+    class="experience2"
+    class:list={classes.experience}
     src={experience2.src}
   />
 
   <img
-    class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience3"
+    class="experience3"
+    class:list={classes.experience}
     src={experience3.src}
   />
 
   <img
-    class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience4"
+    class="experience4"
+    class:list={classes.experience}
     src={experience4.src}
   />
 
   <img
-    class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience5"
+    class="experience5"
+    class:list={classes.experience}
     src={experience5.src}
   />
 
   <img
-    class="absolute top-0 right-0 z-0 w-screen h-screen object-cover experience6"
+    class="experience6"
+    class:list={classes.experience}
     src={experience6.src}
   />
 
   <video
-    class="hero-video absolute top-0 right-0 z-0 w-screen h-screen object-cover pointer-events-none hidden md:block"
+    class:list={classes.video}
     id="videoElem"
     src={video}
     autoplay

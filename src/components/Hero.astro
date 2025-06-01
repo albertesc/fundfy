@@ -1,11 +1,11 @@
 ---
-import HeroItem from "./atoms/HeroItem.astro";
-import TraidingWidget from "./atoms/TraidingWidget.astro";
-import Button from "./atoms/Button.astro";
+import HeroItem from "@atoms/HeroItem.astro";
+import TraidingWidget from "@atoms/TraidingWidget.astro";
+import Button from "@atoms/Button.astro";
 ---
 
 <section
-  class="text-wrapper w-screen h-screen absolute top-0 left-0 pt-24 md:pt-0 z-30"
+  class="text-wrapper w-screen h-screen absolute top-0 left-0 pt-24 md:pr-4 md:pt-0 z-30"
 >
   <HeroItem>
     <div class="relative h-32 md:h-72 mt-6 md:mt-0">
@@ -594,8 +594,8 @@ import Button from "./atoms/Button.astro";
   </HeroItem>
 
   <HeroItem position="center">
-    <div class="hero-text-8 absolute top-0 left-0 w-full px-4">
-      <p class="md:text-center text-xl text-primary mb-8 text-balance">
+    <div class="hero-text-8 w-full px-4">
+      <p class="md:text-center text-xl text-primary mb-3 md:mb-8 text-balance">
         <strong class="text-semibold">Club Fundfy</strong>: forma parte de una
         red privada de inversores
       </p>
@@ -606,10 +606,14 @@ import Button from "./atoms/Button.astro";
         financiero
       </h2>
     </div>
+
+    <div class="join-button mt-4 px-4">
+      <Button tag="a" variant="primary" href="#"> Únete al Club </Button>
+    </div>
   </HeroItem>
 
   <HeroItem position="center">
-    <div class="hero-text-9 absolute top-0 left-0 w-full px-4">
+    <div class="hero-text-9 w-full px-4">
       <p class="text-center text-xl text-primary mb-8">
         <strong class="text-semibold">Experiencias</strong> Más que inversión
       </p>
@@ -622,7 +626,7 @@ import Button from "./atoms/Button.astro";
   </HeroItem>
 
   <HeroItem position="center">
-    <div class="hero-text-10 absolute top-0 left-0 w-full px-4">
+    <div class="hero-text-10 w-full px-4">
       <p class="text-center text-xl text-primary mb-8">
         <strong class="text-semibold">Experiencias</strong> Más que inversión
       </p>
@@ -635,7 +639,7 @@ import Button from "./atoms/Button.astro";
   </HeroItem>
 
   <HeroItem position="center">
-    <div class="hero-text-11 absolute top-0 left-0 w-full px-4">
+    <div class="hero-text-11 w-full px-4">
       <p class="text-center text-xl text-primary mb-8">
         <strong class="text-semibold">Experiencias</strong> Más que inversión
       </p>
@@ -648,7 +652,7 @@ import Button from "./atoms/Button.astro";
   </HeroItem>
 
   <HeroItem position="center">
-    <div class="hero-text-12 absolute top-0 left-0 w-full px-4">
+    <div class="hero-text-12 w-full px-4">
       <p class="text-center text-xl text-primary mb-8">
         <strong class="text-semibold">Experiencias</strong> Más que inversión
       </p>
@@ -661,7 +665,7 @@ import Button from "./atoms/Button.astro";
   </HeroItem>
 
   <HeroItem position="center">
-    <div class="hero-text-13 absolute top-0 left-0 w-full px-4">
+    <div class="hero-text-13 w-full px-4">
       <p class="text-center text-xl text-primary mb-8">
         <strong class="text-semibold">Experiencias</strong> Más que inversión
       </p>
@@ -674,7 +678,7 @@ import Button from "./atoms/Button.astro";
   </HeroItem>
 
   <HeroItem position="center">
-    <div class="hero-text-14 absolute top-0 left-0 w-full px-4">
+    <div class="hero-text-14 w-full px-4">
       <p class="text-center text-xl text-primary mb-8">
         <strong class="text-semibold">Experiencias</strong> Más que inversión
       </p>
@@ -843,17 +847,39 @@ import Button from "./atoms/Button.astro";
       delay: 24,
     })
 
+    .to(
+      ".shadow1",
+      {
+        opacity: 0,
+        duration: 16,
+      },
+      "<"
+    )
+
+    .to(
+      ".shadow2",
+      {
+        scaleX: -1,
+        opacity: 1,
+        duration: 16,
+      },
+      "<"
+    )
+
     // Fade out the fourth text
-    .to(".hero-text-4", {
-      opacity: 0,
-      duration: 6,
-      delay: 20,
-    })
+    .to(
+      ".hero-text-4",
+      {
+        opacity: 0,
+        duration: 16,
+      },
+      "<"
+    )
 
     // Fade in the fifth text
     .to(".hero-text-5", {
       opacity: 1,
-      duration: 6,
+      duration: 16,
     })
 
     // Flip the credit card ----------------------------------------------
@@ -863,17 +889,39 @@ import Button from "./atoms/Button.astro";
       delay: 24,
     })
 
+    .to(
+      ".shadow2",
+      {
+        opacity: 0,
+        duration: 16,
+      },
+      "<"
+    )
+
+    .to(
+      ".shadow3",
+      {
+        scaleX: -1,
+        opacity: 1,
+        duration: 16,
+      },
+      "<"
+    )
+
     // Fade out the fifth text
-    .to(".hero-text-5", {
-      opacity: 0,
-      duration: 6,
-      delay: 20,
-    })
+    .to(
+      ".hero-text-5",
+      {
+        opacity: 0,
+        duration: 16,
+      },
+      "<"
+    )
 
     // Fade in the sixth text
     .to(".hero-text-6", {
       opacity: 1,
-      duration: 6,
+      duration: 16,
     })
 
     // Flip the credit card ----------------------------------------------
@@ -883,24 +931,39 @@ import Button from "./atoms/Button.astro";
       delay: 24,
     })
 
+    .to(
+      ".shadow3",
+      {
+        opacity: 0,
+        duration: 16,
+      },
+      "<"
+    )
+
+    .to(
+      ".shadow4",
+      {
+        scaleX: -1,
+        opacity: 1,
+        duration: 16,
+      },
+      "<"
+    )
+
     // Fade out the sixth text
-    .to(".hero-text-6", {
-      opacity: 0,
-      duration: 6,
-      delay: 20,
-    })
+    .to(
+      ".hero-text-6",
+      {
+        opacity: 0,
+        duration: 16,
+      },
+      "<"
+    )
 
     // Fade in the seventh text
     .to(".hero-text-7", {
       opacity: 1,
-      duration: 6,
-    })
-
-    // Flip the credit card ----------------------------------------------
-    .to(".credit-card, .credit-card-back", {
-      rotationX: 1440,
-      duration: 24,
-      delay: 24,
+      duration: 16,
     })
 
     // Fade out the seventh text
@@ -943,7 +1006,25 @@ import Button from "./atoms/Button.astro";
         translateX: "-50%",
         translateY: "-50px",
         duration: 32,
-        delay: 24,
+      },
+      "<"
+    )
+
+    .to(
+      ".shadow4",
+      {
+        opacity: 0,
+        duration: 16,
+      },
+      "<"
+    )
+
+    .to(
+      ".shadow1",
+      {
+        scaleX: 1,
+        opacity: 1,
+        duration: 16,
       },
       "<"
     )
@@ -969,10 +1050,20 @@ import Button from "./atoms/Button.astro";
       duration: 14,
     })
 
+    .to(
+      ".join-button",
+      {
+        opacity: 1,
+        duration: 6,
+      },
+      "<"
+    )
+
     // Fade out the eighth text
     .to(".hero-text-8", {
       opacity: 0,
       duration: 14,
+      delay: 20,
     })
 
     // Fade in the ninth text

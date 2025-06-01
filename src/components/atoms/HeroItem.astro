@@ -7,22 +7,32 @@ const { position = "left" } = Astro.props as Props;
 ---
 
 <div
-  class="lg:ml-[calc((100vw-1160px)/2)] lg:mr-[calc((100vw-1160px)/2)] flex items-center h-full absolute top-0 left-0 right-0 bottom-0"
+  class="hero-item flex items-center h-full absolute top-0 left-0 right-0 bottom-0"
   class:list={[
     { "justify-end": position === "right" },
     { "justify-center": position === "center" },
   ]}
 >
   <div
-    class="w-full my-auto flex flex-col justify-start md:justify-center relative"
+    class="w-full my-auto flex flex-col justify-start relative"
     class:list={[
       {
-        "md:w-1/2 h-[75dvh] md:h-1/2":
+        "md:w-1/2 h-[75dvh] md:h-1/2 md:justify-center":
           position === "right" || position === "left",
-        "h-[75dvh] md:h-8/12": position === "center",
+        "h-[75dvh] md:h-7/12 md:justify-between items-center":
+          position === "center",
       },
     ]}
   >
     <slot />
   </div>
 </div>
+
+<style>
+  @media (min-width: 768px) {
+    .hero-item {
+      margin-left: calc(((100vw - 1160px) / 2) - 8px);
+      margin-right: calc((((100vw - 1160px) / 2) - 8px) + 16px);
+    }
+  }
+</style>

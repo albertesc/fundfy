@@ -120,6 +120,10 @@ body {
   opacity: 0;
 }
 
+.join-button {
+  opacity: 0;
+}
+
 .hero-video {
   opacity: 0;
 }

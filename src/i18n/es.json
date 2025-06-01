@@ -1,0 +1,121 @@
+{
+    "header": {
+        "INVESTMEN": "Inversion",
+        "EXPERIENCE": "Expeiencia",
+        "FAQS": "FAQs",
+        "JOIN": "Hazte socio"
+    },
+    "buttons": {
+        "KNOWMORE": "Saber más",
+        "JOINCLUB": "Únete al Club",
+        "LAUNCHAPP": "Lanzar App"
+    },
+    "hero": {
+        "SLIDE1": {
+            "title": "Más que un Club de Inversión: transforma tu vida financiera",
+            "subtitle": "Operando bajo la licencia MiCA Europea",
+            "text": "(European Market in Crypto-Assets)"
+        },
+        "SLIDE2": {
+            "title": "Acceso exclusivo a rentabilidad, estrategia y red profesional",
+            "subtitle": "Hemos diseñado una estructura privada para maximizar tu patrimonio"
+        },
+        "SLIDE3": {
+            "title": "Más que ventajas. Una experiencia exclusiva",
+            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+        },
+        "SLIDE4": {
+            "title": "Más que ventajas. Una experiencia exclusiva",
+            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+        },
+        "SLIDE5": {
+            "title": "Más que ventajas. Una experiencia exclusiva",
+            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+        },
+        "SLIDE6": {
+            "title": "Más que ventajas. Una experiencia exclusiva",
+            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+        },
+        "SLIDE7": {
+            "title": "Más que ventajas. Una experiencia exclusiva",
+            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+        },
+        "SLIDE8": {
+            "title": "Más que ventajas. Una experiencia exclusiva",
+            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+        },
+        "SLIDE9": {
+            "title": "Más que ventajas. Una experiencia exclusiva",
+            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+        },
+        "SLIDE10": {
+            "title": "Más que ventajas. Una experiencia exclusiva",
+            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+        },
+        "SLIDE11": {
+            "title": "Más que ventajas. Una experiencia exclusiva",
+            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+        },
+        "SLIDE12": {
+            "title": "Más que ventajas. Una experiencia exclusiva",
+            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+        },
+        "SLIDE13": {
+            "title": "Más que ventajas. Una experiencia exclusiva",
+            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+        },
+        "SLIDE14": {
+            "title": "Más que ventajas. Una experiencia exclusiva",
+            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+        }
+    },
+    "faqs": {
+        "TITLE": "Preguntas frecuentes",
+        "SUBTITLE": "¿Tienes dudas? Aquí encontrarás las respuestas a las preguntas más comunes.",
+        "QUESTION1": {
+            "title": "¿Qué es un Club de Inversión?",
+            "text": "Un Club de Inversión es un grupo de personas que se unen para invertir en conjunto, compartiendo conocimientos y recursos."
+        },
+        "QUESTION2": {
+            "title": "¿Cómo puedo unirme al Club?",
+            "text": "Puedes unirte al Club a través de nuestra página web, donde encontrarás toda la información necesaria."
+        },
+        "QUESTION3": {
+            "title": "¿Qué tipo de inversiones realiza el Club?",
+            "text": "El Club se enfoca en inversiones en criptomonedas y activos digitales, aprovechando las oportunidades del mercado."
+        },
+        "QUESTION4": {
+            "title": "¿Qué beneficios obtengo al ser miembro del Club?",
+            "text": "Como miembro, tendrás acceso a estrategias de inversión exclusivas, asesoramiento profesional y una comunidad activa."
+        }
+    },
+    "contact": {
+        "TITLE": "Contáctanos",
+        "SUBTITLE": "¿Tienes alguna pregunta o necesitas más información? Estamos aquí para ayudarte.",
+        "FORM": {
+            "name": "Nombre completo*",
+            "email": "Email*",
+            "subject": "Asunto",
+            "message": "Mensaje",
+            "mandatoryFields": "* Campos obligatorios",
+            "privacy": "He leído y acepto la política de privacidad",
+            "privacyLink": "https://www.example.com/privacy",
+            "errorName": "Por favor, introduce tu nombre completo.",
+            "errorEmail": "Por favor, introduce un email válido.",
+            "submitSuccess": "¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.",
+            "submit": "Enviar"
+        }
+    },
+    "footer": {
+        "SUBTITLE": "Tu Club de Inversión",
+        "HOME": "Inicio",
+        "CONTACT": "Contacto",
+        "INVESTMEN": "Inversion",
+        "EXPERIENCE": "Expeiencia",
+        "FAQS": "FAQs",
+        "PRIVACY": "Política de Privacidad",
+        "COOKIES": "Política de Cookies",
+        "CONDITIONS": "Condiciones generales",
+        "COPYRIGHT": "Fundfy Investment Club SL ©2025 Todos los derechos reservados"
+    }
+}

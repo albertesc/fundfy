@@ -1,7 +1,14 @@
 ---
-import image from "../assets/fundfy_logo.svg";
-import Button from "./atoms/Button.astro";
-import a from "./atoms/Link.astro";
+import image from "@assets/fundfy_logo.svg";
+import Button from "@atoms/Button.astro";
+import { getI18N } from "@i18n/index.js";
+
+const { currentLocale } = Astro;
+const t = getI18N({ currentLocale });
+
+const classes = {
+  link: "md:hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer",
+};
 ---
 
 <footer class="pt-20 pb-5 bg-dark text-white mt-auto">
@@ -10,72 +17,67 @@ import a from "./atoms/Link.astro";
   >
     <div>
       <img src={image.src} alt="Logo" class="w-40 mb-2.5 mx-auto md:mx-0" />
-      <p class="font-semibold text-xl mb-11">Tu Club de Inversión</p>
-      <Button tag="a">Únete al Club</Button>
+      <p class="font-semibold text-xl mb-11">{t.footer.SUBTITLE}</p>
+      <Button tag="a">{t.buttons.JOINCLUB}</Button>
     </div>
+
     <nav>
       <ul>
         <li>
-          <a
-            class="md:hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer animated-link"
-            data-time="0">Inicio</a
-          >
+          <a class="animated-link" class:list={classes.link} data-time="0">
+            {t.footer.HOME}
+          </a>
         </li>
         <li>
-          <a
-            class="md:hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer animated-link"
-            data-time="80">Inversión</a
-          >
+          <a class="animated-link" class:list={classes.link} data-time="0">
+            {t.footer.INVESTMEN}
+          </a>
         </li>
         <li>
-          <a
-            class="md:hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer animated-link"
-            data-time="0">Experiencias</a
-          >
+          <a class="animated-link" class:list={classes.link} data-time="0">
+            {t.footer.EXPERIENCE}
+          </a>
         </li>
       </ul>
     </nav>
+
     <nav>
       <ul>
         <li>
-          <a
-            class="md:hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer animated-link"
-            data-time="435">FAQS</a
-          >
+          <a class="animated-link" class:list={classes.link} data-time="0">
+            {t.footer.FAQS}
+          </a>
         </li>
         <li>
-          <a
-            class="md:hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer animated-link"
-            data-time="480">Contacto</a
-          >
+          <a class="animated-link" class:list={classes.link} data-time="0">
+            {t.footer.CONTACT}
+          </a>
         </li>
       </ul>
     </nav>
+
     <nav>
       <ul>
         <li>
-          <a
-            class="md:hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer"
-            href="/privacy">Política de Privacidad</a
-          >
+          <a class:list={classes.link} href="/privacy">
+            {t.footer.PRIVACY}
+          </a>
         </li>
         <li>
-          <a
-            class="md:hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer"
-            href="/cookies">Política de Cookies</a
-          >
+          <a class:list={classes.link} href="/cookies">
+            {t.footer.COOKIES}
+          </a>
         </li>
         <li>
-          <a
-            class="md:hover:text-primary active:text-primary transition-colors duration-300 cursor-pointer"
-            href="/conditions">Condiciones generales</a
-          >
+          <a class:list={classes.link} href="/conditions">
+            {t.footer.CONDITIONS}
+          </a>
         </li>
       </ul>
     </nav>
   </div>
 
   <p class="text-center mt-11 text-[14px] opacity-40 px-4">
-    Fundfy Investment Club SL ©2025 Todos los derechos reservados
+    {t.footer.COPYRIGHT}
   </p>
 </footer>

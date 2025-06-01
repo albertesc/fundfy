@@ -1,7 +1,7 @@
 ---
-import image from "../assets/fundfy_logo.svg";
-import MenuMobile from "./atoms/MenuMobile.astro";
-import Menu from "./atoms/Menu.astro";
+import image from "@assets/fundfy_logo.svg";
+import MenuMobile from "@atoms/MenuMobile.astro";
+import Menu from "@atoms/Menu.astro";
 ---
 
 <header class="fixed top-0 bottom-none z-10 w-full">
@@ -15,9 +15,7 @@ import Menu from "./atoms/Menu.astro";
     <a class="logo inline-block w-32 lg:w-52 z-10 cursor-pointer" data-time="0">
       <img src={image.src} alt="Logo" class="w-full h-full" />
     </a>
-
     <Menu />
-
     <MenuMobile />
   </div>
 </header>
