@@ -19,7 +19,7 @@ const { position = "left" } = Astro.props as Props;
       {
         "md:w-1/2 h-[75dvh] md:h-1/2 md:justify-center":
           position === "right" || position === "left",
-        "h-[75dvh] md:h-7/12 md:justify-between items-center":
+        "h-[75dvh] md:h-full md:pt-32 md:justify-between items-center max-h-[920px]":
           position === "center",
       },
     ]}

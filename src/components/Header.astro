@@ -24,13 +24,14 @@ import Menu from "@atoms/Menu.astro";
   const section = document.querySelector(".observe");
   const blur = document.querySelector(".background-blur");
   const menuList = document.querySelector(".menu-list");
+  const hamburgerBtn = document.querySelector("#hamburger-btn");
 
   function comprobarScroll() {
     if (!section) return;
 
     const rect = section.getBoundingClientRect();
 
-    if (!blur || !menuList) return;
+    if (!blur || !menuList || !hamburgerBtn) return;
 
     const offset = 100;
 
@@ -38,10 +39,12 @@ import Menu from "@atoms/Menu.astro";
       blur.classList.add("opacity-100");
       menuList.classList.add("md:text-dark");
       menuList.classList.remove("md:text-white");
+      hamburgerBtn.classList.add("text-dark");
     } else {
       blur.classList.remove("opacity-100");
       menuList.classList.remove("md:text-dark");
       menuList.classList.add("md:text-white");
+      hamburgerBtn.classList.remove("text-dark");
     }
   }
 

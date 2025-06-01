@@ -85,12 +85,6 @@ body {
 }
 
 .hero-text-2,
-.hero-text-3 {
-  opacity: 0;
-  top: -100px;
-}
-
-.hero-text-2,
 .hero-text-3,
 .hero-text-4,
 .hero-text-5,
@@ -102,7 +96,11 @@ body {
 .hero-text-11,
 .hero-text-12,
 .hero-text-13,
-.hero-text-14,
+.hero-text-14 {
+  opacity: 0;
+  top: -100px;
+}
+
 .experience1,
 .experience2,
 .experience3,

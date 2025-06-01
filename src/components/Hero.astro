@@ -607,7 +607,7 @@ import Button from "@atoms/Button.astro";
       </h2>
     </div>
 
-    <div class="join-button mt-4 px-4">
+    <div class="join-button mt-4 mb-24 px-4">
       <Button tag="a" variant="primary" href="#"> Únete al Club </Button>
     </div>
   </HeroItem>
@@ -700,17 +700,14 @@ import Button from "@atoms/Button.astro";
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-  // Create the timeline for the animations
   const tl = gsap
     .timeline()
-    // Flip the credit card
+    // Slide 2 --------------------------------------------------------------
     .to(".credit-card, .credit-card-back", {
       rotationX: 360,
       duration: 24,
       delay: 24,
     })
-
-    // Fade out the first text
     .to(
       ".hero-text-1",
       {
@@ -720,8 +717,6 @@ import Button from "@atoms/Button.astro";
       },
       "<"
     )
-
-    // Fade in the second text
     .to(
       ".hero-text-2",
       {
@@ -733,14 +728,13 @@ import Button from "@atoms/Button.astro";
       "<"
     )
 
-    // Flip the credit card
+    // Slide 3 --------------------------------------------------------------
     .to(".credit-card, .credit-card-back", {
       rotationX: 720,
       duration: 24,
       delay: 24,
     })
 
-    // Fade out the second text
     .to(
       ".hero-text-2",
       {
@@ -750,8 +744,6 @@ import Button from "@atoms/Button.astro";
       },
       "<"
     )
-
-    // Fade in the third text
     .to(
       ".hero-text-3",
       {
@@ -763,7 +755,7 @@ import Button from "@atoms/Button.astro";
       "<"
     )
 
-    // Flip the credit card right to left
+    // Transition to slide 4 --------------------------------------------------------------
     .to(".credit-card, .credit-card-back", {
       rotationY: 10,
       rotationX: -4,
@@ -773,17 +765,6 @@ import Button from "@atoms/Button.astro";
       delay: 24,
     })
 
-    // Fade out tradingview-widget-container
-    .to(
-      ".tradingview-widget-container",
-      {
-        opacity: 0,
-        duration: 6,
-      },
-      "<"
-    )
-
-    // Move the shadow card
     .to(
       ".shadow-card",
       {
@@ -794,8 +775,14 @@ import Button from "@atoms/Button.astro";
       },
       "<"
     )
-
-    // Fade in video
+    .to(
+      ".tradingview-widget-container",
+      {
+        opacity: 0,
+        duration: 6,
+      },
+      "<"
+    )
     .to(
       ".hero-video",
       {
@@ -804,8 +791,6 @@ import Button from "@atoms/Button.astro";
       },
       "<"
     )
-
-    // Fade out the third text
     .to(
       ".hero-text-3",
       {
@@ -825,12 +810,12 @@ import Button from "@atoms/Button.astro";
       "<"
     )
 
-    // Fade in the fourth text
+    // Slide 4 --------------------------------------------------------------
     .to(".hero-text-4", {
       opacity: 1,
+      top: "0",
       duration: 6,
     })
-
     .to(
       ".app-button",
       {
@@ -840,13 +825,12 @@ import Button from "@atoms/Button.astro";
       "<"
     )
 
-    // Flip the credit card ----------------------------------------------
+    // Slide 5 --------------------------------------------------------------
     .to(".credit-card, .credit-card-back", {
       rotationX: 360,
       duration: 24,
       delay: 24,
     })
-
     .to(
       ".shadow1",
       {
@@ -855,7 +839,6 @@ import Button from "@atoms/Button.astro";
       },
       "<"
     )
-
     .to(
       ".shadow2",
       {
@@ -865,30 +848,32 @@ import Button from "@atoms/Button.astro";
       },
       "<"
     )
-
-    // Fade out the fourth text
     .to(
       ".hero-text-4",
       {
         opacity: 0,
-        duration: 16,
+        top: "-100px",
+        duration: 6,
+      },
+      "<"
+    )
+    .to(
+      ".hero-text-5",
+      {
+        opacity: 1,
+        top: "0",
+        duration: 6,
+        delay: 4,
       },
       "<"
     )
 
-    // Fade in the fifth text
-    .to(".hero-text-5", {
-      opacity: 1,
-      duration: 16,
-    })
-
-    // Flip the credit card ----------------------------------------------
+    // Slide 6 --------------------------------------------------------------
     .to(".credit-card, .credit-card-back", {
       rotationX: 720,
       duration: 24,
       delay: 24,
     })
-
     .to(
       ".shadow2",
       {
@@ -897,7 +882,6 @@ import Button from "@atoms/Button.astro";
       },
       "<"
     )
-
     .to(
       ".shadow3",
       {
@@ -907,30 +891,32 @@ import Button from "@atoms/Button.astro";
       },
       "<"
     )
-
-    // Fade out the fifth text
     .to(
       ".hero-text-5",
       {
         opacity: 0,
-        duration: 16,
+        top: "-100px",
+        duration: 6,
+      },
+      "<"
+    )
+    .to(
+      ".hero-text-6",
+      {
+        opacity: 1,
+        top: "0",
+        duration: 6,
+        delay: 4,
       },
       "<"
     )
 
-    // Fade in the sixth text
-    .to(".hero-text-6", {
-      opacity: 1,
-      duration: 16,
-    })
-
-    // Flip the credit card ----------------------------------------------
+    // Slide 7 --------------------------------------------------------------
     .to(".credit-card, .credit-card-back", {
       rotationX: 1080,
       duration: 24,
       delay: 24,
     })
-
     .to(
       ".shadow3",
       {
@@ -939,7 +925,6 @@ import Button from "@atoms/Button.astro";
       },
       "<"
     )
-
     .to(
       ".shadow4",
       {
@@ -949,42 +934,42 @@ import Button from "@atoms/Button.astro";
       },
       "<"
     )
-
-    // Fade out the sixth text
     .to(
       ".hero-text-6",
       {
         opacity: 0,
-        duration: 16,
+        top: "-100px",
+        duration: 6,
+      },
+      "<"
+    )
+    .to(
+      ".hero-text-7",
+      {
+        opacity: 1,
+        top: "0",
+        duration: 6,
+        delay: 4,
       },
       "<"
     )
 
-    // Fade in the seventh text
-    .to(".hero-text-7", {
-      opacity: 1,
-      duration: 16,
-    })
-
-    // Fade out the seventh text
+    // Trasnition to slide 8 --------------------------------------------------------------
     .to(".hero-text-7", {
       opacity: 0,
       duration: 6,
       delay: 20,
       top: "-400px",
     })
-
     .to(
       ".app-button",
       {
         opacity: 0,
         duration: 6,
-        top: "-150px",
+        marginBottom: "400px",
       },
       "<"
     )
-
-    // Fade out the video
     .to(
       ".hero-video",
       {
@@ -993,8 +978,9 @@ import Button from "@atoms/Button.astro";
       },
       "<"
     )
-
-    // Final flip of the credit card
+    .to(".card-container", {
+      height: "75dvh",
+    })
     .to(
       ".credit-card, .credit-card-back",
       {
@@ -1002,14 +988,13 @@ import Button from "@atoms/Button.astro";
         rotationY: 0,
         rotationZ: 0,
         left: "50%",
-        top: "50%",
+        top: "65%",
         translateX: "-50%",
         translateY: "-50px",
         duration: 32,
       },
       "<"
     )
-
     .to(
       ".shadow4",
       {
@@ -1018,7 +1003,6 @@ import Button from "@atoms/Button.astro";
       },
       "<"
     )
-
     .to(
       ".shadow1",
       {
@@ -1028,14 +1012,12 @@ import Button from "@atoms/Button.astro";
       },
       "<"
     )
-
-    // shadow card back to original position
     .to(
       ".shadow-card",
       {
         rotate: 45,
         left: "50%",
-        top: "50%",
+        top: "65%",
         translateX: "-50%",
         translateZ: "-50px",
         translateY: 0,
@@ -1044,12 +1026,11 @@ import Button from "@atoms/Button.astro";
       "<"
     )
 
-    // Fade in the eighth text
+    // Slide 8 --------------------------------------------------------------
     .to(".hero-text-8", {
       opacity: 1,
       duration: 14,
     })
-
     .to(
       ".join-button",
       {
@@ -1059,19 +1040,16 @@ import Button from "@atoms/Button.astro";
       "<"
     )
 
-    // Fade out the eighth text
+    // Slide 9 --------------------------------------------------------------
     .to(".hero-text-8", {
       opacity: 0,
       duration: 14,
       delay: 20,
     })
-
-    // Fade in the ninth text
     .to(".hero-text-9", {
       opacity: 1,
       duration: 14,
     })
-
     .to(
       ".experience1",
       {
@@ -1081,24 +1059,16 @@ import Button from "@atoms/Button.astro";
       "<"
     )
 
-    .to({}, { duration: 20 })
-
-    // Fade out the ninth text
+    // Slide 10 --------------------------------------------------------------
     .to(".hero-text-9", {
       opacity: 0,
       duration: 14,
+      delay: 20,
     })
-
-    // Fade in the tenth text
-    .to(
-      ".hero-text-10",
-      {
-        opacity: 1,
-        duration: 14,
-      },
-      "<"
-    )
-
+    .to(".hero-text-10", {
+      opacity: 1,
+      duration: 14,
+    })
     .to(
       ".experience2",
       {
@@ -1108,24 +1078,16 @@ import Button from "@atoms/Button.astro";
       "<"
     )
 
-    .to({}, { duration: 20 })
-
-    // Fade out the tenth text
+    // Slide 11 --------------------------------------------------------------
     .to(".hero-text-10", {
       opacity: 0,
       duration: 14,
+      delay: 20,
     })
-
-    // Fade in the eleventh text
-    .to(
-      ".hero-text-11",
-      {
-        opacity: 1,
-        duration: 14,
-      },
-      "<"
-    )
-
+    .to(".hero-text-11", {
+      opacity: 1,
+      duration: 14,
+    })
     .to(
       ".experience3",
       {
@@ -1135,24 +1097,16 @@ import Button from "@atoms/Button.astro";
       "<"
     )
 
-    .to({}, { duration: 20 })
-
-    // Fade out the eleventh text
+    // Slide 12 --------------------------------------------------------------
     .to(".hero-text-11", {
       opacity: 0,
       duration: 14,
+      delay: 20,
     })
-
-    // Fade in the twelfth text
-    .to(
-      ".hero-text-12",
-      {
-        opacity: 1,
-        duration: 14,
-      },
-      "<"
-    )
-
+    .to(".hero-text-12", {
+      opacity: 1,
+      duration: 14,
+    })
     .to(
       ".experience4",
       {
@@ -1162,24 +1116,16 @@ import Button from "@atoms/Button.astro";
       "<"
     )
 
-    .to({}, { duration: 20 })
-
-    // Fade out the twelfth text
+    // Slide 13 --------------------------------------------------------------
     .to(".hero-text-12", {
       opacity: 0,
       duration: 14,
+      delay: 20,
     })
-
-    // Fade in the thirteenth text
-    .to(
-      ".hero-text-13",
-      {
-        opacity: 1,
-        duration: 14,
-      },
-      "<"
-    )
-
+    .to(".hero-text-13", {
+      opacity: 1,
+      duration: 14,
+    })
     .to(
       ".experience5",
       {
@@ -1189,24 +1135,16 @@ import Button from "@atoms/Button.astro";
       "<"
     )
 
-    .to({}, { duration: 20 })
-
-    // Fade out the thirteenth text
+    // Slide 14 --------------------------------------------------------------
     .to(".hero-text-13", {
       opacity: 0,
       duration: 14,
+      delay: 20,
     })
-
-    // Fade in the fourteen text
-    .to(
-      ".hero-text-14",
-      {
-        opacity: 1,
-        duration: 14,
-      },
-      "<"
-    )
-
+    .to(".hero-text-14", {
+      opacity: 1,
+      duration: 14,
+    })
     .to(
       ".experience6",
       {
@@ -1216,16 +1154,14 @@ import Button from "@atoms/Button.astro";
       "<"
     )
 
-    .to({}, { duration: 20 })
-
-    // Fade out the fourteen text
+    // Slide 15 --------------------------------------------------------------
     .to(".hero-text-14", {
       duration: 32,
       top: "350px",
       opacity: 0,
     })
 
-    // Card fade and up movement
+    // Final Animation Up ---------------------------------------------------
     .to(
       ".card-container",
       {
@@ -1233,13 +1169,21 @@ import Button from "@atoms/Button.astro";
       },
       "<"
     )
-
     .to(
       ".credit-card, .credit-card-back",
       {
         rotationX: 2520,
         duration: 32,
         transformPerspective: 4000,
+      },
+      "<"
+    )
+    .to(
+      ".join-button",
+      {
+        marginBottom: "300px",
+        opacity: 0,
+        duration: 32,
       },
       "<"
     )
