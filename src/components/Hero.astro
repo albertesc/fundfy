@@ -700,6 +700,9 @@ import Button from "@atoms/Button.astro";
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+  const isMobile = window.matchMedia("(max-width: 1024px)").matches;
+  const cardTop = isMobile ? "65%" : "72%";
+
   const tl = gsap
     .timeline()
     // Slide 2 --------------------------------------------------------------
@@ -988,7 +991,7 @@ import Button from "@atoms/Button.astro";
         rotationY: 0,
         rotationZ: 0,
         left: "50%",
-        top: "65%",
+        top: cardTop,
         translateX: "-50%",
         translateY: "-50px",
         duration: 32,
@@ -1017,7 +1020,7 @@ import Button from "@atoms/Button.astro";
       {
         rotate: 45,
         left: "50%",
-        top: "65%",
+        top: cardTop,
         translateX: "-50%",
         translateZ: "-50px",
         translateY: 0,
