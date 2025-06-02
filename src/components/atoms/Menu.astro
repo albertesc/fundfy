@@ -1,6 +1,11 @@
 ---
 import Button from "../atoms/Button.astro";
 import Link from "../atoms/Link.astro";
+import { MENU_SCROLL_POSITIONS } from "@data/constants";
+import { getI18N } from "@i18n/index.js";
+
+const { currentLocale } = Astro;
+const t = getI18N({ currentLocale });
 ---
 
 <div class="hidden md:flex gap-14 items-center z-10">
@@ -8,36 +13,42 @@ import Link from "../atoms/Link.astro";
     <ul class="menu-list flex items-center gap-14">
       <li>
         <Link
-          dataTime="80"
+          dataTime={MENU_SCROLL_POSITIONS.INVESTMENT}
           className="animated-link text-[15px] font-semibold md:mb-0"
-          >Inversión</Link
         >
+          {t.header.INVESTMEN}
+        </Link>
       </li>
       <li>
         <Link
-          dataTime="225"
+          dataTime={MENU_SCROLL_POSITIONS.EXPERIENCES}
           className="animated-link text-[15px] font-semibold md:mb-0"
-          >Experiencias</Link
         >
+          {t.header.EXPERIENCES}
+        </Link>
       </li>
       <li>
         <Link
+          dataTime={MENU_SCROLL_POSITIONS.FAQS}
           className="animated-link text-[15px] font-semibold md:mb-0"
-          dataTime="435">FAQs</Link
         >
+          {t.header.FAQS}
+        </Link>
       </li>
       <li>
         <Link
+          dataTime={MENU_SCROLL_POSITIONS.CONTACT}
           className="animated-link text-[15px] font-semibold md:mb-0"
-          dataTime="480">Hazte socio</Link
         >
+          {t.header.JOIN}
+        </Link>
       </li>
     </ul>
   </nav>
 
   <div class="">
     <Button href="#" tag="a">
-      Lanzar App
+      {t.buttons.LAUNCHAPP}
       <span class="block ml-2 group-hover:translate-x-1 transition-transform"
         >➔</span
       >

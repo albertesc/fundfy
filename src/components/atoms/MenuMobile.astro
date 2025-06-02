@@ -2,6 +2,11 @@
 import image from "../../assets/fundfy_logo.svg";
 import Button from "../atoms/Button.astro";
 import Link from "../atoms/Link.astro";
+import { MENU_SCROLL_POSITIONS } from "@data/constants";
+import { getI18N } from "@i18n/index.js";
+
+const { currentLocale } = Astro;
+const t = getI18N({ currentLocale });
 ---
 
 <div
@@ -15,23 +20,40 @@ import Link from "../atoms/Link.astro";
   <nav role="navigation" aria-label="Menú principal" class="">
     <ul class="menu-list">
       <li class="md:opacity-100">
-        <Link dataTime="80" className="animated-link">Inversión</Link>
+        <Link
+          dataTime={MENU_SCROLL_POSITIONS.INVESTMENT}
+          className="animated-link"
+        >
+          {t.header.INVESTMEN}
+        </Link>
       </li>
       <li>
-        <Link dataTime="225" className="animated-link">Experiencias</Link>
+        <Link
+          dataTime={MENU_SCROLL_POSITIONS.EXPERIENCES}
+          className="animated-link"
+        >
+          {t.header.EXPERIENCES}
+        </Link>
       </li>
       <li>
-        <Link className="animated-link" dataTime="435">FAQs</Link>
+        <Link dataTime={MENU_SCROLL_POSITIONS.FAQS} className="animated-link">
+          {t.header.FAQS}
+        </Link>
       </li>
       <li>
-        <Link className="animated-link" dataTime="480">Hazte socio</Link>
+        <Link
+          dataTime={MENU_SCROLL_POSITIONS.CONTACT}
+          className="animated-link"
+        >
+          {t.header.JOIN}
+        </Link>
       </li>
     </ul>
   </nav>
 
   <div class="">
     <Button href="#" tag="a">
-      Lanzar App
+      {t.buttons.LAUNCHAPP}
       <span class="block ml-2 group-hover:translate-x-1 transition-transform"
         >➔</span
       >
@@ -39,7 +61,7 @@ import Link from "../atoms/Link.astro";
   </div>
 
   <div class="text-center mt-auto w-full" id="close-menu-btn">
-    <span class="sr-only"> Cerrar menú </span>
+    <span class="sr-only">Cerrar menú</span>
     <button class="text-dark" aria-label="Cerrar menú">
       <svg
         xmlns="http://www.w3.org/2000/svg"

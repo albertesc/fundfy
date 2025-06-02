@@ -4,6 +4,10 @@ import Input from "@atoms/Input.astro";
 import Textarea from "@atoms/Textarea.astro";
 import Button from "@atoms/Button.astro";
 import { actions } from "astro:actions";
+import { getI18N } from "@i18n/index.js";
+
+const { currentLocale } = Astro;
+const t = getI18N({ currentLocale });
 ---
 
 <section class="pb-12 md:py-24 bg-white text-dark z-20 relative" id="join">
@@ -18,13 +22,11 @@ import { actions } from "astro:actions";
     <div class="max-w-[1160px] mx-auto px-4">
       <div class="flex flex-wrap -mx-4">
         <div class="w-full md:w-1/2 px-4">
-          <h2 class="mb-12 md:mb-24 text-xl">
-            — <strong>Contacto</strong> Hazte socio
-          </h2>
+          <h2 class="mb-12 md:mb-24 text-xl" set:html={t.contact.TITLE} />
           <h3
             class="text-[40px] md:text-[56px] text-balance font-light leading-none mb-7"
           >
-            Únete al Club
+            {t.contact.SUBTITLE}
           </h3>
           <form
             action={actions.contact}
@@ -34,30 +36,35 @@ import { actions } from "astro:actions";
           >
             <fieldset>
               <div class="flex flex-col gap-2.5">
-                <Input name="company" label="Nombre completo*" required />
-                <Input name="email" label="Email*" required />
-                <Input name="subject" label="Asunto" />
-                <Textarea name="message" label="Mensaje" />
+                <Input
+                  name="name"
+                  label={t.contact.FORM.NAME}
+                  error={t.contact.FORM.ERROR_NAME}
+                  required
+                />
+                <Input
+                  name="email"
+                  label={t.contact.FORM.EMAIL}
+                  error={t.contact.FORM.ERROR_EMAIL}
+                  required
+                />
+                <Input name="subject" label={t.contact.FORM.SUBJECT} />
+                <Textarea name="message" label={t.contact.FORM.MESSAGE} />
               </div>
 
-              <p class="text-sm mt-4 mb-6">* Campos obligatorios</p>
+              <p class="text-sm mt-4 mb-6">{t.contact.FORM.MANDATORY_FIELDS}</p>
 
               <span class="success-message text-primary mt-4 hidden">
-                Tu email se ha enviado correctamente.<br />En breve nos
-                pondremos en contacto. Gracias.
+                {t.contact.FORM.SUCCESS_MESSAGE}
               </span>
 
-              <Button tag="button">Enviar</Button>
+              <Button tag="button">{t.contact.FORM.SUBMIT}</Button>
             </fieldset>
 
-            <small class="text-gray-400 mt-14 block text-[12px]">
-              Al enviar este formulario, aceptas nuestra <a
-                href="/privacy"
-                class="underline">Política de Privacidad</a
-              > y nos autorizas a procesar tus datos para responder a tu consulta.
-              Tus datos serán tratados de forma segura y no serán compartidos con
-              terceros sin tu consentimiento.</small
-            >
+            <small
+              class="text-gray-400 mt-14 block text-[12px]"
+              set:html={t.contact.FORM.PRIVACY_POLICY}
+            />
           </form>
         </div>
       </div>
@@ -74,33 +81,37 @@ import { actions } from "astro:actions";
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const company = form.querySelector(
-        '[name="company"]'
+      const name = form.querySelector(
+        '[name="name"]'
       ) as HTMLInputElement | null;
       const email = form.querySelector(
         '[name="email"]'
       ) as HTMLInputElement | null;
       let valid = true;
 
-      if (!company || !email) return;
+      if (!name || !email) return;
 
-      form.querySelectorAll(".error-message").forEach((el) => el.remove());
+      form
+        .querySelectorAll(".error-message")
+        .forEach((el) => el.classList.add("hidden"));
       form.querySelectorAll("input, textarea").forEach((el) => {
-        el.classList.remove("bg-red-100");
-        el.classList.remove("focus:ring-red-500");
-        el.classList.remove("placeholder-red-400");
+        el.classList.remove(
+          "bg-red-100",
+          "focus:ring-red-500",
+          "placeholder-red-400"
+        );
       });
 
-      if (!company.value.trim()) {
-        showError(company, "Por favor, rellena tu nombre completo");
+      if (!name.value.trim()) {
+        showError(name);
         valid = false;
       }
 
       if (!email.value.trim()) {
-        showError(email, "Por favor, rellena tu email");
+        showError(email);
         valid = false;
       } else if (!/^\S+@\S+\.\S+$/.test(email.value)) {
-        showError(email, "Por favor, introduce un email válido");
+        showError(email);
         valid = false;
       }
 
@@ -118,25 +129,21 @@ import { actions } from "astro:actions";
       });
     });
 
-    function showError(input: HTMLInputElement, message: string) {
-      const error = document.createElement("p");
-      error.className = "error-message text-red-600 text-sm mt-1";
-      error.innerText = message;
-      if (input.parentNode) {
-        input.parentNode.appendChild(error);
-      }
-      input.classList.add("bg-red-100");
-      input.classList.add("focus:ring-red-500");
-      input.classList.add("placeholder-red-400");
+    function showError(input: HTMLInputElement) {
+      const errorMsg = input.parentNode?.querySelector(".error-message");
+      errorMsg?.classList.remove("hidden");
+      input.classList.add(
+        "bg-red-100",
+        "focus:ring-red-500",
+        "placeholder-red-400"
+      );
     }
 
     function showSuccess() {
       if (!form) return;
-      const successMessage = form.querySelector(".success-message");
-      if (successMessage) {
-        successMessage.classList.remove("hidden");
-        successMessage.classList.add("block");
-      }
+      const successMsg = form.querySelector(".success-message");
+      successMsg?.classList.remove("hidden");
+      successMsg?.classList.add("block");
       form.reset();
     }
   });

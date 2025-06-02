@@ -1,6 +1,7 @@
 ---
 import image from "@assets/fundfy_logo.svg";
 import Button from "@atoms/Button.astro";
+import { MENU_SCROLL_POSITIONS } from "@data/constants";
 import { getI18N } from "@i18n/index.js";
 
 const { currentLocale } = Astro;
@@ -18,23 +19,39 @@ const classes = {
     <div>
       <img src={image.src} alt="Logo" class="w-40 mb-2.5 mx-auto md:mx-0" />
       <p class="font-semibold text-xl mb-11">{t.footer.SUBTITLE}</p>
-      <Button tag="a">{t.buttons.JOINCLUB}</Button>
+      <Button
+        tag="a"
+        className="animated-link"
+        dataTime={MENU_SCROLL_POSITIONS.CONTACT}>{t.buttons.JOINCLUB}</Button
+      >
     </div>
 
     <nav>
       <ul>
         <li>
-          <a class="animated-link" class:list={classes.link} data-time="0">
+          <a
+            class="animated-link"
+            class:list={classes.link}
+            data-time={MENU_SCROLL_POSITIONS.HOME}
+          >
             {t.footer.HOME}
           </a>
         </li>
         <li>
-          <a class="animated-link" class:list={classes.link} data-time="0">
+          <a
+            class="animated-link"
+            class:list={classes.link}
+            data-time={MENU_SCROLL_POSITIONS.INVESTMENT}
+          >
             {t.footer.INVESTMEN}
           </a>
         </li>
         <li>
-          <a class="animated-link" class:list={classes.link} data-time="0">
+          <a
+            class="animated-link"
+            class:list={classes.link}
+            data-time={MENU_SCROLL_POSITIONS.EXPERIENCES}
+          >
             {t.footer.EXPERIENCE}
           </a>
         </li>
@@ -44,12 +61,20 @@ const classes = {
     <nav>
       <ul>
         <li>
-          <a class="animated-link" class:list={classes.link} data-time="0">
+          <a
+            class="animated-link"
+            class:list={classes.link}
+            data-time={MENU_SCROLL_POSITIONS.FAQS}
+          >
             {t.footer.FAQS}
           </a>
         </li>
         <li>
-          <a class="animated-link" class:list={classes.link} data-time="0">
+          <a
+            class="animated-link"
+            class:list={classes.link}
+            data-time={MENU_SCROLL_POSITIONS.CONTACT}
+          >
             {t.footer.CONTACT}
           </a>
         </li>

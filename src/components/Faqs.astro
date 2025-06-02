@@ -2,15 +2,17 @@
 import image from "@assets/faqs.jpg";
 import Accordion from "@atoms/Accordion.astro";
 import AccordionItem from "@atoms/AccordionItem.astro";
+import { getI18N } from "@i18n/index.js";
+
+const { currentLocale } = Astro;
+const t = getI18N({ currentLocale });
 ---
 
 <section class="pb-12 md:py-24 bg-[#F2F3F3] text-dark z-30 relative">
   <div class="max-w-[1160px] mx-auto px-4 hidden md:block">
     <div class="flex flex-wrap justify-end -mx-4">
       <div class="w-full md:w-1/2 px-4">
-        <h2 class="mb-12 md:mb-24 text-xl">
-          — <strong>FAQs</strong> Preguntas frequetes
-        </h2>
+        <h2 class="mb-12 md:mb-24 text-xl" set:html={t.faqs.TITLE} />
       </div>
     </div>
   </div>
@@ -25,60 +27,30 @@ import AccordionItem from "@atoms/AccordionItem.astro";
     <div class="max-w-[1160px] mx-auto px-4">
       <div class="flex flex-wrap justify-end -mx-4">
         <div class="w-full md:w-1/2 px-4">
-          <h2 class="mb-12 md:mb-24 text-xl md:hidden">
-            — <strong>FAQs</strong> Preguntas frequetes
-          </h2>
+          <h2
+            class="mb-12 md:mb-24 text-xl md:hidden"
+            set:html={t.faqs.TITLE}
+          />
           <h3
             class="text-[40px] md:text-[56px] text-balance font-light leading-none mb-16"
           >
-            Todo lo que necesitas saber
+            {t.faqs.SUBTITLE}
           </h3>
           <Accordion>
-            <AccordionItem
-              id="faq1"
-              title="¿Qué tipo de activos financieros puedo custodiar con Fundfy?"
-            >
-              <p class="pb-5">
-                Fundfy permite la custodia tanto de activos tradicionales como
-                digitales, incluyendo criptomonedas, brindando máxima seguridad
-                y acceso verificado.
-              </p>
+            <AccordionItem id="faq1" title={t.faqs.QUESTION1.TITLE}>
+              <p class="pb-5">{t.faqs.QUESTION1.TEXT}</p>
             </AccordionItem>
 
-            <AccordionItem
-              id="faq2"
-              title="¿Qué diferencia a Fundfy de otras plataformas de gestión de activos?"
-            >
-              <p class="pb-5">
-                En Fundfy ofrecemos un enfoque integral que combina la seguridad
-                de la custodia de activos, la innovación en gestión de
-                criptomonedas, y un rendimiento demostrado con una rentabilidad
-                acumulada de +450% desde 2018.
-              </p>
+            <AccordionItem id="faq2" title={t.faqs.QUESTION2.TITLE}>
+              <p class="pb-5">{t.faqs.QUESTION2.TEXT}</p>
             </AccordionItem>
 
-            <AccordionItem
-              id="faq3"
-              title="¿Cómo funciona el servicio de staking en Fundfy?"
-            >
-              <p class="pb-5">
-                Nuestro servicio de staking te permite generar rendimientos
-                pasivos sobre tus criptomonedas depositadas, mientras nos
-                encargamos de la seguridad y el proceso técnico.
-              </p>
+            <AccordionItem id="faq3" title={t.faqs.QUESTION3.TITLE}>
+              <p class="pb-5">{t.faqs.QUESTION3.TEXT}</p>
             </AccordionItem>
 
-            <AccordionItem
-              id="faq4"
-              title="¿Cómo puedo unirme y empezar a invertir con Fundfy?"
-            >
-              <p class="pb-5">
-                Para unirte a Fundfy, simplemente ponte en contacto con nosotros
-                a través del formulario de nuestra web o envíanos un correo
-                electrónico a <a href="mailto:hello@fundfy.io" class="underline"
-                  >hello@fundfy.io</a
-                > y nuestro equipo te guiará a través del proceso.
-              </p>
+            <AccordionItem id="faq4" title={t.faqs.QUESTION4.TITLE}>
+              <p class="pb-5" set:html={t.faqs.QUESTION4.TEXT} />
             </AccordionItem>
           </Accordion>
         </div>

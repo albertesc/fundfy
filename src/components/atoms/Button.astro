@@ -3,9 +3,17 @@ interface Props {
   tag: "a" | "button";
   href?: string;
   variant?: "primary" | "secondary" | "ghost";
+  className?: string;
+  dataTime?: Number;
 }
 
-const { tag = "a", href, variant = "primary" } = Astro.props;
+const {
+  tag = "a",
+  href,
+  variant = "primary",
+  className,
+  dataTime,
+} = Astro.props;
 const Tag = tag;
 ---
 
@@ -25,7 +33,9 @@ const Tag = tag;
       "bg-transparent hover:bg-[#3C4341] active:bg-transparent border-white text-white":
         variant === "ghost",
     },
+    className ? [className] : [],
   ]}
+  data-time={dataTime}
 >
   <slot />
 </Tag>

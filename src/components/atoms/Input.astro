@@ -3,9 +3,10 @@ interface Props {
   name: string;
   label: string;
   required?: boolean;
+  error?: string;
 }
 
-const { name, required = false, label } = Astro.props;
+const { name, required = false, label, error } = Astro.props;
 ---
 
 <div>
@@ -22,5 +23,11 @@ const { name, required = false, label } = Astro.props;
     placeholder={label}
     class="transition-all w-full bg-black/10 px-5 py-3 rounded outline-none focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
   />
-  <div id="name-desc" class="error-message" aria-live="polite"></div>
+  <p
+    id="name-desc"
+    class="error-message text-red-600 text-sm mt-1 hidden"
+    aria-live="polite"
+  >
+    {error}
+  </p>
 </div>

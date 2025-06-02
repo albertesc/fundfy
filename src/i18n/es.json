@@ -1,7 +1,7 @@
 {
     "header": {
         "INVESTMEN": "Inversion",
-        "EXPERIENCE": "Expeiencia",
+        "EXPERIENCES": "Experiencias",
         "FAQS": "FAQs",
         "JOIN": "Hazte socio"
     },
@@ -12,98 +12,104 @@
     },
     "hero": {
         "SLIDE1": {
-            "title": "Más que un Club de Inversión: transforma tu vida financiera",
-            "subtitle": "Operando bajo la licencia MiCA Europea",
-            "text": "(European Market in Crypto-Assets)"
+            "TITLE": "Más que un Club de Inversión: transforma tu vida financiera",
+            "SUBTITLE": "Operando bajo la licencia MiCA Europea",
+            "TEXT": "(European Market in Crypto-Assets)"
         },
         "SLIDE2": {
-            "title": "Acceso exclusivo a rentabilidad, estrategia y red profesional",
-            "subtitle": "Hemos diseñado una estructura privada para maximizar tu patrimonio"
+            "TITLE": "Acceso exclusivo a rentabilidad, estrategia y red profesional",
+            "SUBTITLE": "Hemos diseñado una estructura privada para maximizar tu patrimonio"
         },
         "SLIDE3": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Más que ventajas. Una experiencia exclusiva",
+            "SUBTITLE": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
         },
         "SLIDE4": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Liquidez sin concesiones",
+            "SUBTITLE": "Rotación rápida de capital con gestión estratégica. Accede a tu inversión sin renunciar a rendimiento.",
+            "WALLET_TITLE": "Cartera Anual",
+            "WALLET_TEXT": "APR máximo: 2% mensual / 24% anual"
         },
         "SLIDE5": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Estabilidad con visión estratégica",
+            "SUBTITLE": "Rentabilidad sólida en ciclos de mercado, con la flexibilidad de revisiones periódicas.",
+            "WALLET_TITLE": "Cartera Semestral",
+            "WALLET_TEXT": "APR máximo: 16% semestral / 32% anual"
         },
         "SLIDE6": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Consolidación y estrategia a largo plazo",
+            "SUBTITLE": "Un modelo de gestión pensado para construir valor real y sostenible.",
+            "WALLET_TITLE": "Cartera Mensual",
+            "WALLET_TEXT": "APR máximo: 40% anual"
         },
         "SLIDE7": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Sin calendario. Invierte a tu ritmo",
+            "SUBTITLE": " Entra en el mercado cuando lo necesites e invierte en oportunidades únicas.",
+            "WALLET_TITLE": "Cartera Spot",
+            "WALLET_TEXT": "Sin APR máximo"
         },
         "SLIDE8": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "STRONG_TEXT": "Club Fundfy",
+            "TITLE": "forma parte de una red privada de inversores",
+            "SUBTITLE": "Acceso exclusivo a nuestra membresía para impulsar tu crecimiento financiero"
         },
         "SLIDE9": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Luxe SuperCars"
         },
         "SLIDE10": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Sailing yachting"
         },
         "SLIDE11": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Events"
         },
         "SLIDE12": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Suscriptions"
         },
         "SLIDE13": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Suscriptions"
         },
         "SLIDE14": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "y mucho más..."
+        },
+        "GLOBAL": {
+            "EXPERIENCE_STRONG_TEXT": "Experiencias",
+            "EXPERIENCE_TITLE": "Más que inversión"
         }
     },
     "faqs": {
-        "TITLE": "Preguntas frecuentes",
-        "SUBTITLE": "¿Tienes dudas? Aquí encontrarás las respuestas a las preguntas más comunes.",
+        "TITLE": "— <strong>FAQs</strong> Preguntas frecuentes",
+        "SUBTITLE": "Todo lo que necesitas saber",
         "QUESTION1": {
-            "title": "¿Qué es un Club de Inversión?",
-            "text": "Un Club de Inversión es un grupo de personas que se unen para invertir en conjunto, compartiendo conocimientos y recursos."
+            "TITLE": "¿Qué tipo de activos financieros puedo custodiar con Fundfy?",
+            "TEXT": "Fundfy permite la custodia tanto de activos tradicionales como digitales, incluyendo criptomonedas, brindando máxima seguridad y acceso verificado."
         },
         "QUESTION2": {
-            "title": "¿Cómo puedo unirme al Club?",
-            "text": "Puedes unirte al Club a través de nuestra página web, donde encontrarás toda la información necesaria."
+            "TITLE": "¿Qué diferencia a Fundfy de otras plataformas de gestión de activos?",
+            "TEXT": "En Fundfy ofrecemos un enfoque integral que combina la seguridad de la custodia de activos, la innovación en gestión de criptomonedas, y un rendimiento demostrado con una rentabilidad acumulada de +450% desde 2018."
         },
         "QUESTION3": {
-            "title": "¿Qué tipo de inversiones realiza el Club?",
-            "text": "El Club se enfoca en inversiones en criptomonedas y activos digitales, aprovechando las oportunidades del mercado."
+            "TITLE": "¿Cómo funciona el servicio de staking en Fundfy?",
+            "TEXT": "Nuestro servicio de staking te permite generar rendimientos pasivos sobre tus criptomonedas depositadas, mientras nos encargamos de la seguridad y el proceso técnico."
         },
         "QUESTION4": {
-            "title": "¿Qué beneficios obtengo al ser miembro del Club?",
-            "text": "Como miembro, tendrás acceso a estrategias de inversión exclusivas, asesoramiento profesional y una comunidad activa."
+            "TITLE": "¿Cómo puedo unirme y empezar a invertir con Fundfy?",
+            "TEXT": "Para unirte a Fundfy, simplemente ponte en contacto con nosotros a través del formulario de nuestra web o envíanos un correo electrónico a <a href=\"mailto:hello@fundfy.io\" class=\"underline\">hello@fundfy.io</a> y nuestro equipo te guiará a través del proceso."
         }
     },
     "contact": {
-        "TITLE": "Contáctanos",
-        "SUBTITLE": "¿Tienes alguna pregunta o necesitas más información? Estamos aquí para ayudarte.",
+        "TITLE": "— <strong>Contacto</strong> Hazte socio",
+        "SUBTITLE": "Únete al Club",
         "FORM": {
-            "name": "Nombre completo*",
-            "email": "Email*",
-            "subject": "Asunto",
-            "message": "Mensaje",
-            "mandatoryFields": "* Campos obligatorios",
-            "privacy": "He leído y acepto la política de privacidad",
-            "privacyLink": "https://www.example.com/privacy",
-            "errorName": "Por favor, introduce tu nombre completo.",
-            "errorEmail": "Por favor, introduce un email válido.",
-            "submitSuccess": "¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.",
-            "submit": "Enviar"
+            "NAME": "Nombre completo*",
+            "EMAIL": "Email*",
+            "SUBJECT": "Asunto",
+            "MESSAGE": "Mensaje",
+            "MANDATORY_FIELDS": "* Campos obligatorios",
+            "ERROR_NAME": "Por favor, introduce tu nombre completo.",
+            "ERROR_EMAIL": "Por favor, introduce un email válido.",
+            "SUCCESS_MESSAGE": "Tu email se ha enviado correctamente. En breve nos pondremos en contacto. Gracias.",
+            "SUBMIT": "Enviar",
+            "PRIVACY_POLICY": "Al enviar este formulario, aceptas nuestra <a href=\"/privacy\" class=\"underline\">Política de Privacidad</a> y nos autorizas a procesar tus datos para responder a tu consulta. Tus datos serán tratados de forma segura y no serán compartidos con terceros sin tu consentimiento."
         }
     },
     "footer": {

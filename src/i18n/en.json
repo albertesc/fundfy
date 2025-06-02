@@ -1,121 +1,127 @@
 {
     "header": {
-        "INVESTMEN": "Inversion",
-        "EXPERIENCE": "Expeiencia",
+        "INVESTMEN": "Investment",
+        "EXPERIENCES": "Experiences",
         "FAQS": "FAQs",
-        "JOIN": "Hazte socio"
+        "JOIN": "Join"
     },
     "buttons": {
-        "KNOWMORE": "Saber más",
-        "JOINCLUB": "Únete al Club",
-        "LAUNCHAPP": "Lanzar App"
+        "KNOWMORE": "Know More",
+        "JOINCLUB": "Join the Club",
+        "LAUNCHAPP": "Launch App"
     },
     "hero": {
         "SLIDE1": {
-            "title": "Más que un Club de Inversión: transforma tu vida financiera",
-            "subtitle": "Operando bajo la licencia MiCA Europea",
-            "text": "(European Market in Crypto-Assets)"
+            "TITLE": "More Than an Investment Club: Transform Your Financial Life",
+            "SUBTITLE": "Operating Under the European MiCA License",
+            "TEXT": "(European Market in Crypto-Assets)"
         },
         "SLIDE2": {
-            "title": "Acceso exclusivo a rentabilidad, estrategia y red profesional",
-            "subtitle": "Hemos diseñado una estructura privada para maximizar tu patrimonio"
+            "TITLE": "Exclusive Access to Profitability, Strategy, and Professional Network",
+            "SUBTITLE": "We’ve Designed a Private Structure to Maximize Your Wealth"
         },
         "SLIDE3": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "More Than Advantages. An Exclusive Experience",
+            "SUBTITLE": "We Leave Nothing to Chance: We Rely on Analysis and Measurable Results"
         },
         "SLIDE4": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Liquidity Without Compromise",
+            "SUBTITLE": "Fast Capital Rotation with Strategic Management. Access Your Investment Without Sacrificing Returns.",
+            "WALLET_TITLE": "Annual Portfolio",
+            "WALLET_TEXT": "Maximum APR: 2% Monthly / 24% Annual"
         },
         "SLIDE5": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Stability with Strategic Vision",
+            "SUBTITLE": "Solid Returns Across Market Cycles, with the Flexibility of Periodic Reviews.",
+            "WALLET_TITLE": "Semi-Annual Portfolio",
+            "WALLET_TEXT": "Maximum APR: 16% Semi-Annual / 32% Annual"
         },
         "SLIDE6": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Consolidation and Long-Term Strategy",
+            "SUBTITLE": "A Management Model Designed to Build Real, Sustainable Value.",
+            "WALLET_TITLE": "Monthly Portfolio",
+            "WALLET_TEXT": "Maximum APR: 40% Annual"
         },
         "SLIDE7": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "No Schedule. Invest at Your Pace",
+            "SUBTITLE": "Enter the Market When You Need to and Invest in Unique Opportunities.",
+            "WALLET_TITLE": "Spot Portfolio",
+            "WALLET_TEXT": "No Maximum APR"
         },
         "SLIDE8": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "STRONG_TEXT": "Club Fundfy",
+            "TITLE": "Be Part of a Private Network of Investors",
+            "SUBTITLE": "Exclusive Access to Our Membership to Boost Your Financial Growth"
         },
         "SLIDE9": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Luxe SuperCars"
         },
         "SLIDE10": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Sailing & Yachting"
         },
         "SLIDE11": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Events"
         },
         "SLIDE12": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Subscriptions"
         },
         "SLIDE13": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "Subscriptions"
         },
         "SLIDE14": {
-            "title": "Más que ventajas. Una experiencia exclusiva",
-            "subtitle": "No dejamos nada al azar: nos guiamos por el análisis y resultados medibles"
+            "TITLE": "and Much More..."
+        },
+        "GLOBAL": {
+            "EXPERIENCE_STRONG_TEXT": "Experiences",
+            "EXPERIENCE_TITLE": "More Than Investment"
         }
     },
     "faqs": {
-        "TITLE": "Preguntas frecuentes",
-        "SUBTITLE": "¿Tienes dudas? Aquí encontrarás las respuestas a las preguntas más comunes.",
+        "TITLE": "— <strong>FAQs</strong> Frequently Asked Questions",
+        "SUBTITLE": "Everything You Need to Know",
         "QUESTION1": {
-            "title": "¿Qué es un Club de Inversión?",
-            "text": "Un Club de Inversión es un grupo de personas que se unen para invertir en conjunto, compartiendo conocimientos y recursos."
+            "TITLE": "What Types of Financial Assets Can I Custody with Fundfy?",
+            "TEXT": "Fundfy allows the custody of both traditional and digital assets, including cryptocurrencies, providing maximum security and verified access."
         },
         "QUESTION2": {
-            "title": "¿Cómo puedo unirme al Club?",
-            "text": "Puedes unirte al Club a través de nuestra página web, donde encontrarás toda la información necesaria."
+            "TITLE": "What Sets Fundfy Apart from Other Asset Management Platforms?",
+            "TEXT": "At Fundfy, we offer an integrated approach that combines asset custody security, cryptocurrency management innovation, and a proven track record with cumulative returns of +450% since 2018."
         },
         "QUESTION3": {
-            "title": "¿Qué tipo de inversiones realiza el Club?",
-            "text": "El Club se enfoca en inversiones en criptomonedas y activos digitales, aprovechando las oportunidades del mercado."
+            "TITLE": "How Does the Staking Service Work at Fundfy?",
+            "TEXT": "Our staking service allows you to generate passive returns on your deposited cryptocurrencies, while we handle security and the technical process."
         },
         "QUESTION4": {
-            "title": "¿Qué beneficios obtengo al ser miembro del Club?",
-            "text": "Como miembro, tendrás acceso a estrategias de inversión exclusivas, asesoramiento profesional y una comunidad activa."
+            "TITLE": "How Can I Join and Start Investing with Fundfy?",
+            "TEXT": "To join Fundfy, simply contact us through our website form or email us at <a href=\"mailto:hello@fundfy.io\" class=\"underline\">hello@fundfy.io</a>, and our team will guide you through the process."
         }
     },
     "contact": {
-        "TITLE": "Contáctanos",
-        "SUBTITLE": "¿Tienes alguna pregunta o necesitas más información? Estamos aquí para ayudarte.",
+        "TITLE": "— <strong>Contact</strong> Become a Member",
+        "SUBTITLE": "Join the Club",
         "FORM": {
-            "name": "Nombre completo*",
-            "email": "Email*",
-            "subject": "Asunto",
-            "message": "Mensaje",
-            "mandatoryFields": "* Campos obligatorios",
-            "privacy": "He leído y acepto la política de privacidad",
-            "privacyLink": "https://www.example.com/privacy",
-            "errorName": "Por favor, introduce tu nombre completo.",
-            "errorEmail": "Por favor, introduce un email válido.",
-            "submitSuccess": "¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.",
-            "submit": "Enviar"
+            "NAME": "Full Name*",
+            "EMAIL": "Email*",
+            "SUBJECT": "Subject",
+            "MESSAGE": "Message",
+            "MANDATORY_FIELDS": "* Required Fields",
+            "ERROR_NAME": "Please enter your full name.",
+            "ERROR_EMAIL": "Please enter a valid email address.",
+            "SUCCESS_MESSAGE": "Your email has been sent successfully. We will contact you shortly. Thank you.",
+            "SUBMIT": "Send",
+            "PRIVACY_POLICY": "By submitting this form, you agree to our <a href=\"/privacy\" class=\"underline\">Privacy Policy</a> and authorize us to process your data to respond to your inquiry. Your data will be handled securely and will not be shared with third parties without your consent."
         }
     },
     "footer": {
-        "SUBTITLE": "Tu Club de Inversión",
-        "HOME": "Inicio",
-        "CONTACT": "Contacto",
-        "INVESTMEN": "Inversion",
-        "EXPERIENCE": "Expeiencia",
+        "SUBTITLE": "Your Investment Club",
+        "HOME": "Home",
+        "CONTACT": "Contact",
+        "INVESTMEN": "Investment",
+        "EXPERIENCE": "Experience",
         "FAQS": "FAQs",
-        "PRIVACY": "Política de Privacidad",
-        "COOKIES": "Política de Cookies",
-        "CONDITIONS": "Condiciones generales",
-        "COPYRIGHT": "Fundfy Investment Club SL ©2025 Todos los derechos reservados"
+        "PRIVACY": "Privacy Policy",
+        "COOKIES": "Cookies Policy",
+        "CONDITIONS": "Terms & Conditions",
+        "COPYRIGHT": "Fundfy Investment Club SL ©2025 All Rights Reserved"
     }
 }
