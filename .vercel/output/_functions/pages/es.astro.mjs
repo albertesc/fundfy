@@ -1,6 +1,6 @@
 import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_DXpXXyzT.mjs';
-import { $ as $$Hero, a as $$HeroCard, b as $$HeroBackground, c as $$Faqs, d as $$Contact } from '../chunks/HeroBackground_B0uuqdXO.mjs';
-import { $ as $$Layout } from '../chunks/Layout_BcChRASL.mjs';
+import { $ as $$Hero, a as $$HeroCard, b as $$HeroBackground, c as $$Faqs, d as $$Contact } from '../chunks/HeroBackground_Df4IHBDE.mjs';
+import { $ as $$Layout } from '../chunks/Layout_BGT7fimj.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Index = createComponent(($$result, $$props, $$slots) => {

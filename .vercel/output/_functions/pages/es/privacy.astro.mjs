@@ -1,5 +1,5 @@
 import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead } from '../../chunks/astro/server_DXpXXyzT.mjs';
-import { $ as $$Layout } from '../../chunks/Layout_BcChRASL.mjs';
+import { $ as $$Layout } from '../../chunks/Layout_BGT7fimj.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Privacy = createComponent(($$result, $$props, $$slots) => {

@@ -169,7 +169,7 @@ const $$Astro = createAstro();
 const $$Layout = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Layout;
-  return renderTemplate`<html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><!-- Favicon --><link rel="icon" type="image/png" href="/favicon.ico"><meta name="generator"${addAttribute(Astro2.generator, "content")}><title>Fundfy</title>${renderHead()}</head> <body class="bg-[#242827] text-white overflow-x-hidden"> ${renderComponent($$result, "Header", $$Header, {})} ${renderSlot($$result, $$slots["default"])} ${renderComponent($$result, "Footer", $$Footer, {})} ${renderComponent($$result, "Lines", $$Lines, {})} ${renderScript($$result, "/Users/albert/Sites/fundfy/src/layouts/Layout.astro?astro&type=script&index=0&lang.ts")} </body> </html>`;
+  return renderTemplate`<html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><!-- Favicon --><link rel="icon" type="image/png" href="/favicon.ico"><meta name="generator"${addAttribute(Astro2.generator, "content")}><title>Fundfy</title>${renderHead()}</head> <body class="bg-[#242827] text-white overflow-x-hidden"> ${renderComponent($$result, "Header", $$Header, {})} ${renderSlot($$result, $$slots["default"])} ${renderComponent($$result, "Footer", $$Footer, {})} ${renderComponent($$result, "Lines", $$Lines, {})} ${renderScript($$result, "/Users/albert/Sites/fundfy/src/layouts/Layout.astro?astro&type=script&index=0&lang.ts")}</body></html>`;
 }, "/Users/albert/Sites/fundfy/src/layouts/Layout.astro", void 0);
 
 export { $$Layout as $, MENU_SCROLL_POSITIONS as M, $$Button as a, createSvgComponent as c, getI18N as g };

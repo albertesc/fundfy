@@ -1,5 +1,5 @@
 import { c as createComponent, j as createAstro, m as maybeRenderHead, l as addAttribute, a as renderTemplate, u as unescapeHTML, r as renderComponent, n as renderScript, k as renderSlot } from './astro/server_DXpXXyzT.mjs';
-import { g as getI18N, a as $$Button, c as createSvgComponent, M as MENU_SCROLL_POSITIONS } from './Layout_BcChRASL.mjs';
+import { g as getI18N, a as $$Button, c as createSvgComponent, M as MENU_SCROLL_POSITIONS } from './Layout_BGT7fimj.mjs';
 import { a as actions } from './_astro_actions_DqCZQxmr.mjs';
 /* empty css                         */
 
