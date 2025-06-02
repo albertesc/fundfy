@@ -20,7 +20,6 @@ import Lines from "../components/atoms/Lines.astro";
   <body class="bg-[#242827] text-white overflow-x-hidden">
     <Header />
     <slot />
-    <Footer />
     <Lines />
   </body>
 </html>
@@ -33,7 +32,7 @@ import Lines from "../components/atoms/Lines.astro";
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
   const isMobile = window.matchMedia("(max-width: 1024px)").matches;
-  const cardTop = isMobile ? "65%" : "72%";
+  const cardTop = isMobile ? "80%" : "72%";
 
   const tl = gsap
     .timeline()
@@ -47,7 +46,6 @@ import Lines from "../components/atoms/Lines.astro";
       ".hero-text-1",
       {
         opacity: 0,
-        top: "-100px",
         duration: 6,
       },
       "<"
@@ -56,7 +54,6 @@ import Lines from "../components/atoms/Lines.astro";
       ".hero-text-2",
       {
         opacity: 1,
-        top: "0",
         duration: 6,
         delay: 4,
       },
@@ -74,7 +71,6 @@ import Lines from "../components/atoms/Lines.astro";
       ".hero-text-2",
       {
         opacity: 0,
-        top: "-100px",
         duration: 6,
       },
       "<"
@@ -83,7 +79,6 @@ import Lines from "../components/atoms/Lines.astro";
       ".hero-text-3",
       {
         opacity: 1,
-        top: "0",
         duration: 6,
         delay: 4,
       },
@@ -148,7 +143,6 @@ import Lines from "../components/atoms/Lines.astro";
     // Slide 4 --------------------------------------------------------------
     .to(".hero-text-4", {
       opacity: 1,
-      top: "0",
       duration: 6,
     })
     .to(
@@ -187,7 +181,6 @@ import Lines from "../components/atoms/Lines.astro";
       ".hero-text-4",
       {
         opacity: 0,
-        top: "-100px",
         duration: 6,
       },
       "<"
@@ -196,7 +189,6 @@ import Lines from "../components/atoms/Lines.astro";
       ".hero-text-5",
       {
         opacity: 1,
-        top: "0",
         duration: 6,
         delay: 4,
       },
@@ -230,7 +222,6 @@ import Lines from "../components/atoms/Lines.astro";
       ".hero-text-5",
       {
         opacity: 0,
-        top: "-100px",
         duration: 6,
       },
       "<"
@@ -239,7 +230,6 @@ import Lines from "../components/atoms/Lines.astro";
       ".hero-text-6",
       {
         opacity: 1,
-        top: "0",
         duration: 6,
         delay: 4,
       },
@@ -273,7 +263,6 @@ import Lines from "../components/atoms/Lines.astro";
       ".hero-text-6",
       {
         opacity: 0,
-        top: "-100px",
         duration: 6,
       },
       "<"
@@ -282,7 +271,6 @@ import Lines from "../components/atoms/Lines.astro";
       ".hero-text-7",
       {
         opacity: 1,
-        top: "0",
         duration: 6,
         delay: 4,
       },
@@ -516,8 +504,7 @@ import Lines from "../components/atoms/Lines.astro";
     .to(
       ".join-button",
       {
-        marginBottom: "300px",
-        opacity: 0,
+        marginBottom: "100px",
         duration: 32,
       },
       "<"
@@ -525,7 +512,7 @@ import Lines from "../components/atoms/Lines.astro";
     .to(
       ".text-wrapper, .card-wrapper",
       {
-        marginTop: "-100vh",
+        marginTop: "-100dvh",
         duration: 32,
       },
       "<"

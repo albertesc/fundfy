@@ -93,7 +93,7 @@
         },
         "QUESTION4": {
             "TITLE": "How Can I Join and Start Investing with Fundfy?",
-            "TEXT": "To join Fundfy, simply contact us through our website form or email us at <a href=\"mailto:hello@fundfy.io\" class=\"underline\">hello@fundfy.io</a>, and our team will guide you through the process."
+            "TEXT": "To join Fundfy, simply contact us through our website form or email us at <a href=\"mailto:hello@fundfy.io\" class=\"underline hover:text-primary\">hello@fundfy.io</a>, and our team will guide you through the process."
         }
     },
     "contact": {
@@ -109,7 +109,7 @@
             "ERROR_EMAIL": "Please enter a valid email address.",
             "SUCCESS_MESSAGE": "Your email has been sent successfully. We will contact you shortly. Thank you.",
             "SUBMIT": "Send",
-            "PRIVACY_POLICY": "By submitting this form, you agree to our <a href=\"/privacy\" class=\"underline\">Privacy Policy</a> and authorize us to process your data to respond to your inquiry. Your data will be handled securely and will not be shared with third parties without your consent."
+            "PRIVACY_POLICY": "By submitting this form, you agree to our <a href=\"/privacy\" class=\"underline hover:text-primary\">Privacy Policy</a> and authorize us to process your data to respond to your inquiry. Your data will be handled securely and will not be shared with third parties without your consent."
         }
     },
     "footer": {

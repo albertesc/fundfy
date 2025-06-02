@@ -12,7 +12,7 @@ body {
 }
 
 .card-wrapper {
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -41,7 +41,7 @@ body {
 @media (max-width: 768px) {
   .credit-card,
   .credit-card-back {
-    width: 280px;
+    width: 260px;
     align-items: flex-start;
     justify-content: flex-start;
   }
@@ -81,7 +81,6 @@ body {
 
 .hero-text-1 {
   opacity: 1;
-  top: 0;
 }
 
 .hero-text-2,
@@ -96,11 +95,7 @@ body {
 .hero-text-11,
 .hero-text-12,
 .hero-text-13,
-.hero-text-14 {
-  opacity: 0;
-  top: -100px;
-}
-
+.hero-text-14,
 .experience1,
 .experience2,
 .experience3,

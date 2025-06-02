@@ -1,6 +1,6 @@
 {
     "header": {
-        "INVESTMEN": "Inversion",
+        "INVESTMEN": "Inversión",
         "EXPERIENCES": "Experiencias",
         "FAQS": "FAQs",
         "JOIN": "Hazte socio"
@@ -93,7 +93,7 @@
         },
         "QUESTION4": {
             "TITLE": "¿Cómo puedo unirme y empezar a invertir con Fundfy?",
-            "TEXT": "Para unirte a Fundfy, simplemente ponte en contacto con nosotros a través del formulario de nuestra web o envíanos un correo electrónico a <a href=\"mailto:hello@fundfy.io\" class=\"underline\">hello@fundfy.io</a> y nuestro equipo te guiará a través del proceso."
+            "TEXT": "Para unirte a Fundfy, simplemente ponte en contacto con nosotros a través del formulario de nuestra web o envíanos un correo electrónico a <a href=\"mailto:hello@fundfy.io\" class=\"underline hover:text-primary\">hello@fundfy.io</a> y nuestro equipo te guiará a través del proceso."
         }
     },
     "contact": {
@@ -109,15 +109,15 @@
             "ERROR_EMAIL": "Por favor, introduce un email válido.",
             "SUCCESS_MESSAGE": "Tu email se ha enviado correctamente. En breve nos pondremos en contacto. Gracias.",
             "SUBMIT": "Enviar",
-            "PRIVACY_POLICY": "Al enviar este formulario, aceptas nuestra <a href=\"/privacy\" class=\"underline\">Política de Privacidad</a> y nos autorizas a procesar tus datos para responder a tu consulta. Tus datos serán tratados de forma segura y no serán compartidos con terceros sin tu consentimiento."
+            "PRIVACY_POLICY": "Al enviar este formulario, aceptas nuestra <a href=\"/privacy\" class=\"underline hover:text-primary\">Política de Privacidad</a> y nos autorizas a procesar tus datos para responder a tu consulta. Tus datos serán tratados de forma segura y no serán compartidos con terceros sin tu consentimiento."
         }
     },
     "footer": {
         "SUBTITLE": "Tu Club de Inversión",
         "HOME": "Inicio",
         "CONTACT": "Contacto",
-        "INVESTMEN": "Inversion",
-        "EXPERIENCE": "Expeiencia",
+        "INVESTMEN": "Inversión",
+        "EXPERIENCE": "Experiencias",
         "FAQS": "FAQs",
         "PRIVACY": "Política de Privacidad",
         "COOKIES": "Política de Cookies",
