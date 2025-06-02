@@ -1,0 +1,72 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "^/_astro/(.*)$",
+			"headers": {
+				"cache-control": "public, max-age=31536000, immutable"
+			},
+			"continue": true
+		},
+		{
+			"src": "^/_server-islands/([^/]+?)/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/_image/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/_actions(?:/(.*?))?/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/404/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/conditions/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/cookies/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/es/404/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/es/conditions/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/es/cookies/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/es/privacy/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/es/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/privacy/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/.*$",
+			"dest": "_render",
+			"status": 404
+		}
+	]
+}

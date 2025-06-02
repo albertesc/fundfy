@@ -1,18 +1,20 @@
 ---
-import Legal from "@layouts/Legal.astro";
+import Layout from "@layouts/Layout.astro";
 ---
 
-<Legal>
-  <div class="observe">
-    <div class="bg-white py-32">
-      <div class="mx-auto px-4">
-        <h1 class="text-3xl font-bold mb-4 text-dark text-center">
-          Error 404: Página no encontrada
-        </h1>
-        <p class="text-dark text-xl text-center max-w-4xl">
-          No hemos podido encontrar la página que estás buscando.
-        </p>
+<Layout>
+  <main class="flex flex-col min-h-screen bg-white">
+    <div class="observe">
+      <div class="bg-white py-32">
+        <div class="mx-auto px-4">
+          <h1 class="text-3xl font-bold mb-4 text-dark text-center">
+            Error 404: Página no encontrada
+          </h1>
+          <p class="text-dark text-xl text-center max-w-4xl">
+            No hemos podido encontrar la página que estás buscando.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</Legal>
+  </main>
+</Layout>
