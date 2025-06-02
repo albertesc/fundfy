@@ -527,12 +527,22 @@ import Lines from "../components/atoms/Lines.astro";
     pin: true,
   });
 
+  const supportedLocales = ["es", "lt"];
+  const path = window.location.pathname;
+
+  const currentLocale =
+    supportedLocales.find((loc) => path.startsWith("/" + loc)) || "en";
+
+  const isHome =
+    currentLocale === "en" ? path === "/" : path === `/${currentLocale}`;
+
   const params = new URLSearchParams(window.location.search);
   const scrollToParam = params.get("scrollTo");
 
   if (scrollToParam) {
     const time = parseFloat(scrollToParam);
     setTimeout(() => scrollToTime(time), 100);
+
     const newUrl = window.location.pathname;
     window.history.replaceState({}, "", newUrl);
   }
@@ -541,16 +551,10 @@ import Lines from "../components/atoms/Lines.astro";
     btn.addEventListener("click", (e) => {
       const targetTime = parseFloat((btn as HTMLElement).dataset.time ?? "0");
 
-      console.log("Target Time:", targetTime);
-
-      const path = window.location.pathname;
-      const isHome = path === "/" || path === "/es";
-      const isSpanish = path.startsWith("/es");
-
       if (!isHome) {
         e.preventDefault();
 
-        const homePath = isSpanish ? "/es" : "/";
+        const homePath = currentLocale === "en" ? "/" : `/${currentLocale}`;
         const url = `${homePath}?scrollTo=${targetTime}`;
         window.location.href = url;
         return;

@@ -11,6 +11,10 @@ body {
   scroll-behavior: smooth;
 }
 
+a:not(.button):hover {
+  color: var(--color-primary);
+}
+
 .card-wrapper {
   height: 100dvh;
   width: 100vw;

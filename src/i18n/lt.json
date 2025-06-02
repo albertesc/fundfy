@@ -1,0 +1,127 @@
+{
+    "header": {
+        "INVESTMEN": "Investavimas",
+        "EXPERIENCES": "Patirtys",
+        "FAQS": "DUK",
+        "JOIN": "Tapk nariu"
+    },
+    "buttons": {
+        "KNOWMORE": "Sužinok daugiau",
+        "JOINCLUB": "Prisijunk prie klubo",
+        "LAUNCHAPP": "Paleisti programėlę"
+    },
+    "hero": {
+        "SLIDE1": {
+            "TITLE": "Daugiau nei investicijų klubas: pakeiskite savo finansinį gyvenimą",
+            "SUBTITLE": "Veikiame pagal Europos MiCA licenciją",
+            "TEXT": "(Europos kriptoaktyvų rinka)"
+        },
+        "SLIDE2": {
+            "TITLE": "Išskirtinė prieiga prie pelningumo, strategijos ir profesionalų tinklo",
+            "SUBTITLE": "Sukūrėme privačią struktūrą, kad maksimaliai padidintume jūsų turtą"
+        },
+        "SLIDE3": {
+            "TITLE": "Ne tik privalumai. Išskirtinė patirtis",
+            "SUBTITLE": "Nieko nepaliekame atsitiktinumui: vadovaujamės analize ir matuojamais rezultatais"
+        },
+        "SLIDE4": {
+            "TITLE": "Likvidumas be kompromisų",
+            "SUBTITLE": "Greitas kapitalo sukimas su strateginiu valdymu. Pasiekite savo investicijas neprarandant grąžos.",
+            "WALLET_TITLE": "Metinis portfelis",
+            "WALLET_TEXT": "Maks. metinė grąža (APR): 2 % per mėnesį / 24 % per metus"
+        },
+        "SLIDE5": {
+            "TITLE": "Stabilumas su strategine vizija",
+            "SUBTITLE": "Stabili grąža rinkos cikluose, su periodinių peržiūrų lankstumu.",
+            "WALLET_TITLE": "Pusmečio portfelis",
+            "WALLET_TEXT": "Maks. metinė grąža (APR): 16 % per pusmetį / 32 % per metus"
+        },
+        "SLIDE6": {
+            "TITLE": "Konsolidacija ir ilgalaikė strategija",
+            "SUBTITLE": "Valdymo modelis, skirtas kurti realią ir tvarią vertę.",
+            "WALLET_TITLE": "Mėnesio portfelis",
+            "WALLET_TEXT": "Maks. metinė grąža (APR): 40 % per metus"
+        },
+        "SLIDE7": {
+            "TITLE": "Be kalendoriaus. Investuokite savo tempu",
+            "SUBTITLE": "Įženkite į rinką, kai jums reikia, ir investuokite į unikalius pasiūlymus.",
+            "WALLET_TITLE": "Spot portfelis",
+            "WALLET_TEXT": "Nėra maksimalaus APR"
+        },
+        "SLIDE8": {
+            "STRONG_TEXT": "Fundfy klubas",
+            "TITLE": "būkite privačių investuotojų tinklo dalimi",
+            "SUBTITLE": "Išskirtinė prieiga prie mūsų narystės, kad skatintumėte savo finansinį augimą"
+        },
+        "SLIDE9": {
+            "TITLE": "Prabangūs superautomobiliai"
+        },
+        "SLIDE10": {
+            "TITLE": "Jachtų buriavimas"
+        },
+        "SLIDE11": {
+            "TITLE": "Renginiai"
+        },
+        "SLIDE12": {
+            "TITLE": "Prenumeratos"
+        },
+        "SLIDE13": {
+            "TITLE": "Prenumeratos"
+        },
+        "SLIDE14": {
+            "TITLE": "ir dar daugiau..."
+        },
+        "GLOBAL": {
+            "EXPERIENCE_STRONG_TEXT": "Patirtys",
+            "EXPERIENCE_TITLE": "Daugiau nei investavimas"
+        }
+    },
+    "faqs": {
+        "TITLE": "— <strong>DUK</strong> Dažnai užduodami klausimai",
+        "SUBTITLE": "Viskas, ką reikia žinoti",
+        "QUESTION1": {
+            "TITLE": "Kokio tipo finansinius išteklius galiu patikėti Fundfy saugoti?",
+            "TEXT": "Fundfy leidžia saugoti tiek tradicinius, tiek skaitmeninius turtus, įskaitant kriptovaliutas, užtikrindamas maksimalų saugumą ir patikrintą prieigą."
+        },
+        "QUESTION2": {
+            "TITLE": "Kuo Fundfy skiriasi nuo kitų turto valdymo platformų?",
+            "TEXT": "Fundfy siūlo visapusišką požiūrį, apjungiantį turto saugojimo saugumą, inovacijas kriptovaliutų valdyme ir patikrintą veiklą su +450 % sukauptos grąžos nuo 2018 m."
+        },
+        "QUESTION3": {
+            "TITLE": "Kaip veikia stakingo paslauga Fundfy?",
+            "TEXT": "Mūsų stakingo paslauga leidžia jums gauti pasyvias pajamas už jūsų indėliuotas kriptovaliutas, kol mes pasirūpiname saugumu ir techniniu procesu."
+        },
+        "QUESTION4": {
+            "TITLE": "Kaip galiu prisijungti ir pradėti investuoti su Fundfy?",
+            "TEXT": "Norėdami prisijungti prie Fundfy, tiesiog susisiekite su mumis per mūsų svetainės formą arba atsiųskite el. laišką adresu <a href=\"mailto:hello@fundfy.io\" class=\"underline hover:text-primary\">hello@fundfy.io</a>, ir mūsų komanda jus lydės per procesą."
+        }
+    },
+    "contact": {
+        "TITLE": "— <strong>Kontaktai</strong> Tapkite nariu",
+        "SUBTITLE": "Prisijunk prie klubo",
+        "FORM": {
+            "NAME": "Vardas, pavardė*",
+            "EMAIL": "El. paštas*",
+            "SUBJECT": "Tema",
+            "MESSAGE": "Žinutė",
+            "MANDATORY_FIELDS": "* Privalomi laukai",
+            "ERROR_NAME": "Prašome įvesti visą vardą ir pavardę.",
+            "ERROR_EMAIL": "Prašome įvesti galiojantį el. pašto adresą.",
+            "SUCCESS_MESSAGE": "Jūsų el. laiškas sėkmingai išsiųstas. Netrukus susisieksime. Ačiū.",
+            "SUBMIT": "Siųsti",
+            "PRIVACY_POLICY": "Siųsdami šią formą, jūs sutinkate su mūsų <a href=\"/privacy\" class=\"underline hover:text-primary\">Privatumo politika</a> ir suteikiate leidimą tvarkyti jūsų duomenis, kad galėtume atsakyti į jūsų užklausą. Jūsų duomenys bus tvarkomi saugiai ir nebus perduodami tretiesiems asmenims be jūsų sutikimo."
+        }
+    },
+    "footer": {
+        "SUBTITLE": "Jūsų investicijų klubas",
+        "HOME": "Pagrindinis",
+        "CONTACT": "Kontaktai",
+        "INVESTMEN": "Investavimas",
+        "EXPERIENCE": "Patirtys",
+        "FAQS": "DUK",
+        "PRIVACY": "Privatumo politika",
+        "COOKIES": "Slapukų politika",
+        "CONDITIONS": "Bendrosios sąlygos",
+        "COPYRIGHT": "Fundfy Investment Club SL ©2025 Visos teisės saugomos"
+    }
+}
