@@ -1,5 +1,5 @@
 import { a as appendForwardSlash, j as joinPaths } from './path_BuZodYwm.mjs';
-import { A as AstroError, g as MissingLocale, R as REROUTE_DIRECTIVE_HEADER, i as i18nNoLocaleFoundInPath } from './astro/server_Eu3TDnBi.mjs';
+import { A as AstroError, b as MissingLocale, R as REROUTE_DIRECTIVE_HEADER, i as i18nNoLocaleFoundInPath } from './astro/server_DXpXXyzT.mjs';
 
 function shouldAppendForwardSlash(trailingSlash, buildFormat) {
   switch (trailingSlash) {

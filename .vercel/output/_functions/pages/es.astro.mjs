@@ -1,9 +1,10 @@
-import { c as createComponent, d as renderComponent, f as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_Eu3TDnBi.mjs';
-import { $ as $$Layout, a as $$Hero, b as $$HeroCard, c as $$HeroBackground, d as $$Faqs, e as $$Contact } from '../chunks/HeroBackground_Cg46yhCk.mjs';
+import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_DXpXXyzT.mjs';
+import { $ as $$Hero, a as $$HeroCard, b as $$HeroBackground, c as $$Faqs, d as $$Contact } from '../chunks/HeroBackground_B0uuqdXO.mjs';
+import { $ as $$Layout } from '../chunks/Layout_BcChRASL.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Index = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, {}, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Hero", $$Hero, {})} ${renderComponent($$result2, "Card", $$HeroCard, {})} ${renderComponent($$result2, "HeroBackground", $$HeroBackground, {})} ${maybeRenderHead()}<div class="observe"> ${renderComponent($$result2, "Faqs", $$Faqs, {})} ${renderComponent($$result2, "Contact", $$Contact, {})} </div> ` })}`;
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, {}, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<main> ${renderComponent($$result2, "Hero", $$Hero, {})} ${renderComponent($$result2, "Card", $$HeroCard, {})} ${renderComponent($$result2, "HeroBackground", $$HeroBackground, {})} <div class="observe"> ${renderComponent($$result2, "Faqs", $$Faqs, {})} ${renderComponent($$result2, "Contact", $$Contact, {})} </div> </main> ` })}`;
 }, "/Users/albert/Sites/fundfy/src/pages/es/index.astro", void 0);
 
 const $$file = "/Users/albert/Sites/fundfy/src/pages/es/index.astro";
