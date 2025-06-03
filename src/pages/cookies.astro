@@ -65,40 +65,122 @@ import Footer from "@components/Footer.astro";
 
           <section>
             <h2>3. Which Cookies Do We Use Exactly?</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Cookie Name</th>
-                  <th>Type</th>
-                  <th>Purpose</th>
-                  <th>Duration</th>
-                  <th>Owner</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>fundfy_session</td>
-                  <td>Necessary</td>
-                  <td>Maintains user session</td>
-                  <td>Session</td>
-                  <td>FundFy</td>
-                </tr>
-                <tr>
-                  <td>_ga / _gid</td>
-                  <td>Analytics (Google)</td>
-                  <td>Analyzes site usage</td>
-                  <td>1 day / 2 years</td>
-                  <td>Google Analytics</td>
-                </tr>
-                <tr>
-                  <td>cookie_consent</td>
-                  <td>Necessary</td>
-                  <td>Stores your cookie consent</td>
-                  <td>1 year</td>
-                  <td>FundFy</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="overflow-x-auto">
+              <table class="min-w-full bg-white divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Cookie Name
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Type
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Purpose
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Duration
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Owner
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                  <tr class="hover:bg-gray-50">
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      fundfy_session
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      Necessary
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      Maintains user session
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      Session
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      FundFy
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50">
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      _ga / _gid
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      Analytics (Google)
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      Analyzes site usage
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      1 day / 2 years
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      Google Analytics
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50">
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      cookie_consent
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      Necessary
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      Stores your cookie consent
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      1 year
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      FundFy
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
 
           <section>

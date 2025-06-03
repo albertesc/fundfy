@@ -67,40 +67,122 @@ import Footer from "@components/Footer.astro";
 
           <section>
             <h2>3. Kokius slapukus naudojame tiksliai?</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Slapuko pavadinimas</th>
-                  <th>Tipas</th>
-                  <th>Paskirtis</th>
-                  <th>Laikotarpis</th>
-                  <th>Savininkas</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>fundfy_session</td>
-                  <td>Būtinas</td>
-                  <td>Laiko vartotojo sesiją</td>
-                  <td>Sesijos</td>
-                  <td>FundFy</td>
-                </tr>
-                <tr>
-                  <td>_ga / _gid</td>
-                  <td>Analitinis (Google)</td>
-                  <td>Analizuoja svetainės naudojimą</td>
-                  <td>1 diena / 2 metai</td>
-                  <td>Google Analytics</td>
-                </tr>
-                <tr>
-                  <td>cookie_consent</td>
-                  <td>Būtinas</td>
-                  <td>Išsaugo jūsų slapukų sutikimą</td>
-                  <td>1 metai</td>
-                  <td>FundFy</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="overflow-x-auto">
+              <table class="min-w-full bg-white divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Slapuko pavadinimas
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Tipas
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Paskirtis
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Laikotarpis
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Savininkas
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                  <tr class="hover:bg-gray-50">
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      fundfy_session
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      Būtinas
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      Laiko vartotojo sesiją
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      Sesijos
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      FundFy
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50">
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      _ga / _gid
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      Analitinis (Google)
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      Analizuoja svetainės naudojimą
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      1 diena / 2 metai
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      Google Analytics
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-gray-50">
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      cookie_consent
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      Būtinas
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      Išsaugo jūsų slapukų sutikimą
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      1 metai
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
+                    >
+                      FundFy
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
 
           <section>
