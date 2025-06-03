@@ -14,7 +14,7 @@ export const server = {
       const { data, error } = await resend.emails.send({
         from: "Funfy <hello@fundfy.io>",
         to: [import.meta.env.RECIPIENT_EMAIL],
-        subject: "Funfy - Contact Form",
+        subject: "Funfy - Formulario de contacto",
         html: `
             <body style="margin:0; padding:0; background-color:#f4f4f4; font-family:Arial, sans-serif
               <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
@@ -23,7 +23,7 @@ export const server = {
                       <table width="600" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#ffffff; margin:20px 0; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
                         <tr>
                             <td style="background-color:#91BDB4; padding:20px; text-align:center;">
-                              <img src="https://fundfy.io/wp-content/uploads/2024/11/LOGO-CE-negativo.png" alt="Logo Empresa" width="150" style="display:block; margin:0 auto;">
+                              <img src="https://fundfy-iota.vercel.app/fundfy_logo_white.png" alt="Logo Empresa" width="150" style="display:block; margin:0 auto;">
                             </td>
                         </tr>
                         <tr>
