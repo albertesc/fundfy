@@ -42,10 +42,19 @@ a:not(.button):hover {
   right: 50px;
 }
 
-@media (max-width: 1190px) {
+@media (max-width: 1240px) {
   .credit-card,
   .credit-card-back {
-    width: 260px;
+    width: 360px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .credit-card,
+  .credit-card-back {
+    width: 320px;
     align-items: flex-start;
     justify-content: flex-start;
   }
