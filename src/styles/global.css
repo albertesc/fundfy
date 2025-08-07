@@ -42,7 +42,7 @@ a:not(.button):hover {
   right: 50px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1190px) {
   .credit-card,
   .credit-card-back {
     width: 260px;

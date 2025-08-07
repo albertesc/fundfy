@@ -34,7 +34,7 @@ const { title } = Astro.props;
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
   const isMobile = window.matchMedia("(max-width: 1024px)").matches;
-  const cardTop = isMobile ? "80%" : "72%";
+  const cardTop = isMobile ? "80%" : "80%";
 
   const tl = gsap
     .timeline()
